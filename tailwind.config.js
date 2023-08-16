@@ -13,7 +13,8 @@ module.exports = {
         dimWhite: "rgba(255, 255, 255, 0.7)",
         dimBlue: "rgba(9, 151, 124, 0.1)",
         NavTextColor:"#ff4810",
-        custombg:"#000410"
+        custombg:"#000410",
+        formbg:"#2a2539"
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

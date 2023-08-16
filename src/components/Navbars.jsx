@@ -2,12 +2,14 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { useState } from "react";
 import logo from "../asstes/Solution Road New Logo.png"
+import { useNavigate } from 'react-router-dom';
 import "./Nabars.css"
 import { BsFillGrid3X3GapFill,BsFillFileExcelFill} from "react-icons/bs";
 
 const Navbars = () => {
   const [navbar, setNavbar] = useState(false);
   const [toogle ,settoogle] =useState(true)
+  const navigate = useNavigate();
 
   const handleClick = () => {
     settoogle(!toogle)
@@ -32,7 +34,7 @@ const Navbars = () => {
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[18px] text-NavTextColor no-underline`}>Home</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[18px] text-NavTextColor no-underline`}>About</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[18px] text-NavTextColor no-underline`}>Services</NavLink>
-          <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[18px] text-NavTextColor no-underline`}>Features</NavLink>
+          <NavLink to='/signup' className={`font-poppins font-bold cursor-pointer text-[18px] text-NavTextColor no-underline`}>Admin</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[18px] text-NavTextColor no-underline`}>Contact</NavLink>
         </div>
       </nav>
