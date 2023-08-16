@@ -40,7 +40,7 @@ const Navbars = () => {
         </div>
       </nav>
           {/* mobile navbar */}
-      <nav className=' w-screen flex bg-black  mt-2 justify-between  lg:hidden' >
+      <nav className=' w-screen flex   mt-2 justify-between  lg:hidden' >
         <div className="flex flex-col justify-center  items-center">
           <div className="rounded-full border border-solid border-black bg-white bod" style={{width:"80px", height:"80px",}}>
           <img className="w-full max-w-full h-auto sm:w-6/2 md:w-full" src={logo} alt="Image description"/>  
@@ -51,8 +51,8 @@ const Navbars = () => {
        
         <div className={`flex flex-col  md:hidden  relative  z-10 top-0   px-4 ${toogle ? '':"bg-black"}`}>
           {/* {toogle ? <BsFillFileExcelFill color="white" onClick={()=>handleClick()}   className="text-9xl" /> : <BsFillGrid3X3GapFill color="white" className="text-6xl" />} */}
-          {toogle && <GiHamburgerMenu color="white" className="text-4xl" onClick={()=>handleClick()} />}
-          {!toogle && <BsFillFileExcelFill color="white" className="text-4xl" onClick={()=>handleClick()} />}
+          {toogle && <GiHamburgerMenu color="white" className="text-4xl mt-4" onClick={()=>handleClick()} />}
+          {!toogle && <BsFillFileExcelFill color="white" className="text-4xl mt-4" onClick={()=>handleClick()} />}
         <div className={`${toogle ? "hidden":"flex"} mt-4 flex  flex-col gap-6 bg-black w-[120px] items-center right-0 absolute top-2 justify-center `}>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>Home</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>About</NavLink>
