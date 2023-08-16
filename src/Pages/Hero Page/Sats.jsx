@@ -30,14 +30,14 @@ const Sats = () => {
       {/* the two div section starts here */}
       <div className='w-screen flex flex-col lg:flex-row lg:m-6'>
 
-        <div className='w-screen lg:w-1/2 flex flex-col items-center lg:items-start justify-center font-poppins text-white lg:mr-19 lg:ml-8 lg:py-x'>
-          <h2 className='text-white flex flex-col items-start font-poppins text=lg mr-8 text-left'>
+        <div className='w-screen lg:w-1/2 flex flex-col  lg:items-start justify-center font-poppins text-white lg:mr-19 lg:ml-8 '>
+          <h2 className='text-white flex flex-col align-left font-poppins text=lg ml-4 lg:mr-8 mt-4 lg:mr-0 text-left'>
           You do the business, <span>we’ll handle the money.</span>
           </h2>
           <div className=' text-[#b3b4b7] text-sm font-poppins ml-4 lg:ml-0'>
           With the right credit card, you can improve your financial life by building credit, earning rewards and saving money. But with hundreds of credit cards on the market.
           </div>
-          <button className="btn w-[120px] h-[45px] mt-4 items-center justify-end"> Button
+          <button className="btn w-[120px] h-[45px] mt-4 items-center justify-center"> Button
           </button>
         </div>
 
@@ -84,11 +84,19 @@ const Sats = () => {
       </div>
 
       {/* second two div section */}
-      <div className='flex flex-col lg:flex-row w-screen h-fit mx-24'>
-        <div className='w-1/2'>
-           <img className=" h-auto w-1/2 sm:w-1/2 md:w-1/2" src={Banner} alt="Image description"/>
+      <div className='flex flex-col lg:flex-row w-screen h-fit mr-2 lg:mr-0  lg:mx-24'>
+        <div className='w-full lg:w-1/2'>
+           <img className=" h-auto w-full mr-4 lg:mr-0 lg:w-1/2" src={Banner} alt="Image description"/>
         </div>
-        <div className='w-1/2'></div>
+
+        <div className='w-full lg:w-1/2 flex flex-col items-start justify-center'>
+          <h2 className='text-white flex flex-col items-start font-poppins text=lg ml-4 lg:mr-8 mt-4 lg:mr-0 text-left'>
+          Easily control your <span>billing & invoicing.</span>
+          </h2>
+          <span className='text-[#b3b4b7] text-sm font-poppins ml-4 lg:ml-0'>
+            With the right credit card, you can improve your financial life by building credit, earning rewards and saving money. But with hundreds of credit cards on the market.
+          </span>
+          </div>
       </div>
     </div>
   )
