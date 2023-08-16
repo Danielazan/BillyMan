@@ -12,7 +12,7 @@ import "./styles/istButton.css"
 const Sats = () => {
   return (
     <div className='w-screen h-fit bg-custombg'>
-      <div className='flex w-screen h-fit  justify-between items-center pr-5 pl-5'>
+      <div className='flex w-screen h-fit  justify-evenly items-center'>
         <div className='flex flex-col  mb-1 mt-2 items-center text-center justify-center align-items-center'>
             <span className='font-bold text-lg lg:2xl font-poppins text-white '>8542+</span>
             <span className='font-bold text-lg lg:2xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text '>Active Members</span>
@@ -84,20 +84,22 @@ const Sats = () => {
       </div>
 
       {/* second two div section */}
-      <div className='flex flex-col lg:flex-row w-screen h-fit mr-2 lg:mr-0  lg:mx-24'>
-        <div className='w-full lg:w-1/2'>
-           <img className=" h-auto w-full mr-4 lg:mr-0 lg:w-1/2" src={Banner} alt="Image description"/>
+      <div className='flex flex-col lg:flex-row w-screen h-fit lg:mr-0  '>
+        <div className='w-full lg:w-1/2 lg:ml-14'>
+           <img className=" h-auto w-full lg:mr-0 lg:w-1/2" src={Banner} alt="Image description"/>
         </div>
 
-        <div className='w-full lg:w-1/2 flex flex-col items-start justify-center'>
-          <h2 className='text-white flex flex-col items-start font-poppins text=lg ml-4 lg:mr-8 mt-4 lg:mr-0 text-left'>
+        <div className='w-screen lg:w-1/2 flex flex-col items-start justify-center'>
+          <h2 className='text-white flex flex-col items-start font-poppins text=lg ml-4 lg:mr-8 mt-4  text-left'>
           Easily control your <span>billing & invoicing.</span>
           </h2>
-          <span className='text-[#b3b4b7] text-sm font-poppins ml-4 lg:ml-0'>
-            With the right credit card, you can improve your financial life by building credit, earning rewards and saving money. But with hundreds of credit cards on the market.
-          </span>
+          <p className='text-[#b3b4b7] text-sm font-poppins flex flex-col ml-4 lg:ml-0 mr-10 lg:mr-0'>
+          Elit enim sed massa etiam. Mauris eu adipiscing ultrices ametodio aenean neque. <span>Fusce ipsum orci rhoncus aliporttitor integer platea placerat.
+            </span>
+          </p>
           </div>
       </div>
+
     </div>
   )
 }

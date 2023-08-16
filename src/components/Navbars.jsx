@@ -21,7 +21,7 @@ const Navbars = () => {
     console.log('React icon clicked!');
   };
   return (
-    <div className='w-screen  px-4 relative'>
+    <div className='w-screen  lg:px-4 relative'>
       <nav className='hidden lg:flex w-full flex py-6 sticky top-0 justify-between items-center px-4 '>
         <div className="flex flex-col justify-center items-center">
         <div className="rounded-full border border-solid border-black bg-white bod" style={{width:"80px", height:"80px",}}>
@@ -40,8 +40,8 @@ const Navbars = () => {
         </div>
       </nav>
           {/* mobile navbar */}
-      <nav className=' w-full flex items-center justify-between  lg:hidden' >
-        <div className="flex flex-col justify-center items-center">
+      <nav className=' w-screen flex bg-black  mt-2 justify-between  lg:hidden' >
+        <div className="flex flex-col justify-center  items-center">
           <div className="rounded-full border border-solid border-black bg-white bod" style={{width:"80px", height:"80px",}}>
           <img className="w-full max-w-full h-auto sm:w-6/2 md:w-full" src={logo} alt="Image description"/>  
           </div>
@@ -49,11 +49,11 @@ const Navbars = () => {
             <span className='font-poppins font-bold cursor-pointer text-yellow-500 text-[10px]'>Equipments & Sparks Ltd</span>
         </div>
        
-        <div className={`flex flex-col block md:hidden items-center relative  z-10 justify-center mt-6   px-4 ${toogle ? '':"bg-black"}`}>
+        <div className={`flex flex-col  md:hidden  relative  z-10 top-0   px-4 ${toogle ? '':"bg-black"}`}>
           {/* {toogle ? <BsFillFileExcelFill color="white" onClick={()=>handleClick()}   className="text-9xl" /> : <BsFillGrid3X3GapFill color="white" className="text-6xl" />} */}
           {toogle && <GiHamburgerMenu color="white" className="text-4xl" onClick={()=>handleClick()} />}
           {!toogle && <BsFillFileExcelFill color="white" className="text-4xl" onClick={()=>handleClick()} />}
-        <div className={`${toogle ? "hidden":"flex"} mt-4 flex  flex-col gap-6 bg-black w-[120px] items-center absolute top-2 justify-center `}>
+        <div className={`${toogle ? "hidden":"flex"} mt-4 flex  flex-col gap-6 bg-black w-[120px] items-center right-0 absolute top-2 justify-center `}>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>Home</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>About</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>Services</NavLink>
