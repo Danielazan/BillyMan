@@ -53,7 +53,7 @@ const Navbars = () => {
           {/* {toogle ? <BsFillFileExcelFill color="white" onClick={()=>handleClick()}   className="text-9xl" /> : <BsFillGrid3X3GapFill color="white" className="text-6xl" />} */}
           {toogle && <GiHamburgerMenu color="white" className="text-4xl mt-2" onClick={()=>handleClick()} />}
           {!toogle && <BsFillFileExcelFill color="white" className="text-4xl mt-2" onClick={()=>handleClick()} />}
-        <div className={`${toogle ? "hidden":"flex"} mt-4 flex  flex-col gap-6 bg-black w-[120px] items-center right-0 absolute top-8 justify-center `}>
+        <div className={`${toogle ? "hidden":"flex"} mt-4 flex rounded-md flex-col gap-6 bg-black w-[120px] items-center right-0 absolute top-8 justify-center `}>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>Home</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>About</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>Services</NavLink>
