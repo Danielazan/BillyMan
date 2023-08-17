@@ -3,6 +3,7 @@ import Navbars from '../../components/Navbars'
 import HeroImg2 from "asstes/mobileMachine.jpg"
 import { AiFillGitlab } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer'
 
 import "./styles/Hero.css"
 import Sats from './Sats';
@@ -55,7 +56,9 @@ const Hero = () => {
       <Sats />
       </section>
       
-      
+        <section>
+            <Footer/>
+        </section>
     </div>
     
   )

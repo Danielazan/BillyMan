@@ -14,7 +14,7 @@ import Testimony from './Testimony';
 const Sats = () => {
   return (
     <div className='w-screen h-fit bg-custombg'>
-      <div className='flex w-screen h-fit  justify-evenly items-center'>
+      <div className='flex w-full h-fit  justify-evenly items-center'>
         <div className='flex flex-col  mb-1 mt-2 items-center text-center justify-center align-items-center'>
             <span className='font-bold text-lg lg:2xl font-poppins text-white '>8542+</span>
             <span className='font-bold text-lg lg:2xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text '>Active Members</span>
@@ -30,7 +30,7 @@ const Sats = () => {
       </div>
 
       {/* the two div section starts here */}
-      <div className='w-screen flex flex-col lg:flex-row lg:mt-8'>
+      <div className='w-full flex flex-col lg:flex-row lg:mt-8'>
 
         <div className='w-screen lg:w-1/2 flex flex-col  lg:items-start justify-center font-poppins text-white lg:mr-19 lg:ml-8 lg:pr-8 '>
           <h2 className='text-white flex flex-col align-left font-poppins text=lg ml-4 lg:mr-8 mt-4 lg:mr-0 text-left'>
@@ -91,7 +91,7 @@ const Sats = () => {
       </div>
 
       {/* second two div section */}
-      <div className='flex flex-col lg:flex-row w-screen h-fit lg:mr-0 mt-8 lg:mt-6  '>
+      <div className='flex flex-col lg:flex-row w-full h-fit lg:mr-0 mt-8 lg:mt-6  '>
         <div className='w-full lg:w-1/2 lg:ml-14'>
            <img className=" h-auto w-full lg:mr-0 lg:w-1/2" src={Banner} alt="Image description"/>
         </div>
@@ -121,7 +121,7 @@ const Sats = () => {
 
         {/* third two div section */}
 
-      <div className='flex flex-col lg:flex-row w-screen h-fit lg:mr-0 mt-8 lg:mt-6  '>
+      <div className='flex flex-col lg:flex-row w-full h-fit lg:mr-0 mt-8 lg:mt-6  '>
         <div className='w-screen lg:w-1/2 flex flex-col items-start justify-center lg:mr-16 lg:mt-6'>
 
           <div class="loader items-center justify-center ml-28">
