@@ -1,12 +1,12 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import {Container,Row,Col} from 'react-bootstrap';
 import "./styles/Sats.css"
 import Banner from "asstes/card.png"
 import { BsStarFill,BsFillCursorFill } from "react-icons/bs";
-import { BiCheckSquare } from "react-icons/bi";
 import { MdOutlineGppGood,MdGppGood } from "react-icons/md";
 import "./styles/istButton.css"
+import "./styles/pyriamid.css"
+import Card from "asstes/bill.png"
+
 
 
 const Sats = () => {
@@ -28,20 +28,25 @@ const Sats = () => {
       </div>
 
       {/* the two div section starts here */}
-      <div className='w-screen flex flex-col lg:flex-row lg:m-6'>
+      <div className='w-screen flex flex-col lg:flex-row lg:mt-8'>
 
-        <div className='w-screen lg:w-1/2 flex flex-col  lg:items-start justify-center font-poppins text-white lg:mr-19 lg:ml-8 '>
+        <div className='w-screen lg:w-1/2 flex flex-col  lg:items-start justify-center font-poppins text-white lg:mr-19 lg:ml-8 lg:pr-8 '>
           <h2 className='text-white flex flex-col align-left font-poppins text=lg ml-4 lg:mr-8 mt-4 lg:mr-0 text-left'>
           You do the business, <span>we’ll handle the money.</span>
           </h2>
           <div className=' text-[#b3b4b7] text-sm font-poppins ml-4 lg:ml-0'>
-          With the right credit card, you can improve your financial life by building credit, earning rewards and saving money. But with hundreds of credit cards on the market.
+            <p className='lg:mr-9 flex flex-col'>
+              With the right credit card, you can improve your financial life by building credit, 
+                <span>
+                earning rewards and saving money. But with hundreds of credit cards on the market.
+                </span> 
+            </p> 
           </div>
-          <button className="btn w-[120px] h-[45px] mt-4 items-center justify-center"> Button
+          <button className="btn w-[120px] h-[45px] mt-4 ml-6 lg:ml-0 items-center justify-center"> Button
           </button>
         </div>
 
-        <div className='w-screen lg:w-1/2 flex flex-col items-center justify-between  lg:mx-7 lg:px-14'>
+        <div className='w-screen lg:w-1/2 flex flex-col items-center justify-between mt-4 lg:mt-0  lg:ml-6 lg:pr-14'>
 
             {/* the list card */}
             <div className='flex items-center justify-center gap-2 m-2'>
@@ -84,12 +89,21 @@ const Sats = () => {
       </div>
 
       {/* second two div section */}
-      <div className='flex flex-col lg:flex-row w-screen h-fit lg:mr-0  '>
+      <div className='flex flex-col lg:flex-row w-screen h-fit lg:mr-0 mt-8 lg:mt-6  '>
         <div className='w-full lg:w-1/2 lg:ml-14'>
            <img className=" h-auto w-full lg:mr-0 lg:w-1/2" src={Banner} alt="Image description"/>
         </div>
 
         <div className='w-screen lg:w-1/2 flex flex-col items-start justify-center'>
+          <div class="pyramid-loader">
+            <div class="wrapper">
+              <span class="side side1"></span>
+              <span class="side side2"></span>
+              <span class="side side3"></span>
+              <span class="side side4"></span>
+              <span class="shadow"></span>
+            </div>  
+          </div>
           <h2 className='text-white flex flex-col items-start font-poppins text=lg ml-4 lg:mr-8 mt-4  text-left'>
           Easily control your <span>billing & invoicing.</span>
           </h2>
@@ -97,7 +111,29 @@ const Sats = () => {
           Elit enim sed massa etiam. Mauris eu adipiscing ultrices ametodio aenean neque. <span>Fusce ipsum orci rhoncus aliporttitor integer platea placerat.
             </span>
           </p>
+            <div className='w-1/2'>
+
+            </div>
           </div>
+      </div>
+
+        {/* third two div section */}
+
+      <div className='flex flex-col lg:flex-row w-screen h-fit lg:mr-0 mt-8 lg:mt-6  '>
+        <div className='w-screen lg:w-1/2 flex flex-col items-start justify-center'>
+          
+          <h2 className='text-white flex flex-col items-start font-poppins text=lg ml-4 lg:ml-8 mt-4  text-left'>
+          Easily control your <span>billing & invoicing.</span>
+          </h2>
+          <p className='text-[#b3b4b7] text-sm font-poppins flex flex-col ml-4 lg:ml-8 mr-10 lg:mr-0'>
+          Elit enim sed massa etiam. Mauris eu adipiscing ultrices ametodio aenean neque. <span>Fusce ipsum orci rhoncus aliporttitor integer platea placerat.
+            </span>
+          </p>
+          </div>
+
+          <div className='w-full lg:w-1/2 lg:ml-1'>
+           <img className=" h-auto w-full lg:mr-0 lg:w-1/2" src={Card} alt="Image description"/>
+        </div>
       </div>
 
     </div>

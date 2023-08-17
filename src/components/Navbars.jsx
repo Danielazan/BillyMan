@@ -49,11 +49,11 @@ const Navbars = () => {
             <span className='font-poppins font-bold cursor-pointer text-yellow-500 text-[10px]'>Equipments & Sparks Ltd</span>
         </div>
        
-        <div className={`flex flex-col  md:hidden  relative  z-10 top-0   px-4 ${toogle ? '':"bg-black"}`}>
+        <div className={`flex flex-col  md:hidden  relative  px-4`}>
           {/* {toogle ? <BsFillFileExcelFill color="white" onClick={()=>handleClick()}   className="text-9xl" /> : <BsFillGrid3X3GapFill color="white" className="text-6xl" />} */}
-          {toogle && <GiHamburgerMenu color="white" className="text-4xl mt-4" onClick={()=>handleClick()} />}
-          {!toogle && <BsFillFileExcelFill color="white" className="text-4xl mt-4" onClick={()=>handleClick()} />}
-        <div className={`${toogle ? "hidden":"flex"} mt-4 flex  flex-col gap-6 bg-black w-[120px] items-center right-0 absolute top-2 justify-center `}>
+          {toogle && <GiHamburgerMenu color="white" className="text-4xl mt-2" onClick={()=>handleClick()} />}
+          {!toogle && <BsFillFileExcelFill color="white" className="text-4xl mt-2" onClick={()=>handleClick()} />}
+        <div className={`${toogle ? "hidden":"flex"} mt-4 flex  flex-col gap-6 bg-black w-[120px] items-center right-0 absolute top-8 justify-center `}>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>Home</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>About</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>Services</NavLink>
