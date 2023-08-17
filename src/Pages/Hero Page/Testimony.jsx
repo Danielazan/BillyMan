@@ -55,7 +55,7 @@ const Testimony = () => {
       {/* Teams Section */}
 
           <div className='w-full h-fit flex items-center justify-center'>
-          <h1 className='bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-poppins text-6xl '>Team Members</h1>
+          <h1 className='bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-poppins text-4xl lg:text-6xl '>Team Members</h1>
           </div>
       <div className='w-full flex flex-col lg:flex-row items-center justify-between lg:pl-4 lg:pr-4 '>
           
