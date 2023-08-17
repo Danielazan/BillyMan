@@ -6,6 +6,8 @@ import { MdOutlineGppGood,MdGppGood } from "react-icons/md";
 import "./styles/istButton.css"
 import "./styles/pyriamid.css"
 import Card from "asstes/bill.png"
+import './styles/joiningbox.css'
+import Testimony from './Testimony';
 
 
 
@@ -42,7 +44,7 @@ const Sats = () => {
                 </span> 
             </p> 
           </div>
-          <button className="btn w-[120px] h-[45px] mt-4 ml-6 lg:ml-0 items-center justify-center"> Button
+          <button className="button w-[120px] h-[45px] mt-4 ml-6 lg:ml-0 items-center justify-center"> Button
           </button>
         </div>
 
@@ -120,22 +122,32 @@ const Sats = () => {
         {/* third two div section */}
 
       <div className='flex flex-col lg:flex-row w-screen h-fit lg:mr-0 mt-8 lg:mt-6  '>
-        <div className='w-screen lg:w-1/2 flex flex-col items-start justify-center'>
-          
+        <div className='w-screen lg:w-1/2 flex flex-col items-start justify-center lg:mr-16 lg:mt-6'>
+
+          <div class="loader items-center justify-center ml-28">
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+          </div>
           <h2 className='text-white flex flex-col items-start font-poppins text=lg ml-4 lg:ml-8 mt-4  text-left'>
-          Easily control your <span>billing & invoicing.</span>
+            Find a better card deal <span>in few easy steps.</span>
           </h2>
           <p className='text-[#b3b4b7] text-sm font-poppins flex flex-col ml-4 lg:ml-8 mr-10 lg:mr-0'>
-          Elit enim sed massa etiam. Mauris eu adipiscing ultrices ametodio aenean neque. <span>Fusce ipsum orci rhoncus aliporttitor integer platea placerat.
-            </span>
+          Arcu tortor, purus in mattis at sed integer faucibus. Aliquet quis aliquet eget mauris tortor.ç Aliquet ultrices ac, ametau.
           </p>
-          </div>
+        </div>
 
-          <div className='w-full lg:w-1/2 lg:ml-1'>
+        <div className='w-full lg:w-1/2 lg:ml-25 lg:flex lg:items-center lg:justify-center '>
            <img className=" h-auto w-full lg:mr-0 lg:w-1/2" src={Card} alt="Image description"/>
         </div>
       </div>
+        {/* Testimonial section */}
 
+        <Testimony/>
     </div>
   )
 }

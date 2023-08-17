@@ -3,58 +3,57 @@
     padding: 0;
     box-sizing: border-box;
 }
-.btn {
-    --color: #33bbcf;
-    --color2: rgb(10, 25, 30);
-    padding: 0.8em 1.75em;
+.button {
+    --color: #00A97F;
+    padding: 0.8em 1.7em;
     background-color: transparent;
-    border-radius: 6px;
-    border: .3px solid var(--color);
-    transition: .5s;
+    border-radius: .3em;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    z-index: 1;
-    font-weight: 300;
+    transition: .5s;
+    font-weight: 400;
     font-size: 17px;
-    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    border: 1px solid;
+    font-family: inherit;
     text-transform: uppercase;
     color: var(--color);
+    z-index: 1;
    }
    
-   .btn::after, .btn::before {
+   .button::before, .button::after {
     content: '';
     display: block;
-    height: 100%;
-    width: 100%;
-    transform: skew(90deg) translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
     position: absolute;
-    inset: 50%;
-    left: 25%;
+    border-radius: 50%;
     z-index: -1;
-    transition: .5s ease-out;
     background-color: var(--color);
+    transition: 1s ease;
    }
    
-   .btn::before {
-    top: -50%;
-    left: -25%;
-    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+   .button::before {
+    top: -1em;
+    left: -1em;
    }
    
-   .btn:hover::before {
-    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+   .button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
    }
    
-   .btn:hover::after {
-    transform: skew(45deg) translate(-50%, -50%);
+   .button:hover::before, .button:hover::after {
+    height: 410px;
+    width: 410px;
    }
    
-   .btn:hover {
-    color: var(--color2);
+   .button:hover {
+    color: rgb(10, 25, 30);
    }
    
-   .btn:active {
-    filter: brightness(.7);
-    transform: scale(.98);
+   .button:active {
+    filter: brightness(.8);
    }
+   
