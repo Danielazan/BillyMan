@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <div className='bg-[#06080d] w-full h-fit'>
         <div className='w-full '>
-            <div className='w-1/2 h-fit'>
-                <div className='flex items-center justify-between'>
+            <div className='lg:w-1/2 h-fit w-full'>
+                <div className='w-full flex items-center justify-evenly'>
                     <div className="rounded-full border border-solid border-black bg-white bod" style={{width:"40px", height:"40px",}}>
                         <img className="w-full max-w-full h-auto sm:w-6/2 md:w-full" src={logo} alt="Image description"/>  
                     </div>

@@ -102,7 +102,7 @@ const Testimony = () => {
         {/* Try our services section */}
 
         <div className='w-full flex flex-col items-center justify-center mt-6 relative'>
-          <div className="bg-black w-[600px] h-[400px] py-5 d-flex justify-content-center align-items-center mb-20">
+          <div className="bg-black w-[200px] height-200 lg:w-[600px] lg:h-[400px]  py-5 d-flex justify-content-center align-items-center mb-20">
               <div className="obj ">
                   <div className="objchild">
                     <h1 className='text-white text-center text-2xl'>Try our services Now</h1>
