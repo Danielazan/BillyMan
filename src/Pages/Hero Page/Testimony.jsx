@@ -4,6 +4,12 @@ import './styles/AboutCard.css'
 import './styles/TeamCard.css'
 import './styles/whatpeople.css'
 import './styles/TryServices.css'
+import Operations from "asstes/Teams Pictures/Operat.jpg"
+import supervisor from "asstes/Teams Pictures/22.jpg"
+import Manager from "asstes/Teams Pictures/Manager.jpg"
+import { BsFillTelephoneInboundFill } from "react-icons/bs";
+import { IoLogoWhatsapp } from "react-icons/io";
+
 const Testimony = () => {
   return (
     <div className='h-fit w-screen  '>
@@ -41,9 +47,6 @@ const Testimony = () => {
           </div>
 
           <div className='w-full  lg:w-1/2 lg:items-center lg:justify-center flex flex-col'>
-              <div className='relative'>
-                
-              </div>
 
               <h1 className='text-white text-2xl font-poppins flex flex-col lg:text-4xl mt-6 lg:mt-0  text-center lg:text-left'>
               What people are <span>saying about us</span>
@@ -59,42 +62,64 @@ const Testimony = () => {
           </div>
       <div className='w-full flex flex-col lg:flex-row items-center justify-between lg:pl-4 lg:pr-4 '>
           
-        <div className="teamcard w-[280px] h-[350px] flex flex-col items-center justify-between text-left mb-3 lg:mb-0">
-            <div className='rounded-full w-[150px] h-[150px] bg-black'>
-
+        <div className="teamcard w-[300px] h-[380px] flex flex-col items-center justify-between text-left mb-3 lg:mb-0">
+            <div className='rounded-full w-[110px] h-[120px] bg-black mb-4'>
+              <img className=" rounded-full h-auto w-full lg:mr-0 " src={Manager
+              } alt="Image description"/>
             </div>
-            <h1 className='text-[24px] text-white '>
-              Lorem ipsum dolor sit, 
+            <h1 className='text-[18px]  text-white '>
+              VIJAY PRAKASH
             </h1>
-            <p className='text-xs font-poppins text-[#] text-left'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eius saepe incidunt distinctio odio at ratione rerum veritatis ipsa natus accusamus aut veniam
+            <p className='text-md font-poppins text-[#dea2eb] text-center font-bold'>
+              Managing Director
             </p>
+            <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
+              <IoLogoWhatsapp className="text-lg" color="#00f6ff"/> +2347084618070
+            </h1>
+            <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
+              <BsFillTelephoneInboundFill className="text-lg" color="#00f6ff"/> +2349127794404
+            </h1>
+           
 
         </div>
 
-        <div className="teamcard w-[280px] h-[350px] flex flex-col items-center justify-between text-left mb-3 lg:mb-0">
-            <div className='rounded-full w-[150px] h-[150px] bg-black'>
-
+        <div className="teamcard w-[300px] h-[380px] flex flex-col items-center justify-between text-left mb-3 lg:mb-0">
+            <div className='rounded-full  w-[110px] h-[120px] bg-black mb-4'>
+                <img className=" rounded-full h-auto w-full lg:mr-0 " src={supervisor} alt="Image description"/>
             </div>
-            <h1 className='text-[24px] text-white '>
-              Lorem ipsum dolor sit, 
+            <h1 className='text-[18px]  text-white '>
+              SANTOSH KUMAR K 
             </h1>
-            <p className='text-xs font-poppins text-[#] text-left'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eius saepe incidunt distinctio odio at ratione rerum veritatis ipsa natus accusamus aut veniam
+            <p className='text-md font-poppins text-[#dea2eb] text-center font-bold'>
+              Fabrication Supervisor
             </p>
+
+            <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
+              <IoLogoWhatsapp className="text-lg" color="#00f6ff"/> +234802934452
+            </h1>
+            <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
+              <BsFillTelephoneInboundFill className="text-lg" color="#00f6ff"/> +2349036645619
+            </h1>
+           
 
         </div>
 
-        <div className="teamcard w-[280px] h-[350px] flex flex-col items-center justify-between text-left mb-3 lg:mb-0">
-            <div className='rounded-full w-[150px] h-[150px] bg-black'>
-
+        <div className="teamcard w-[300px] h-[380px] flex flex-col items-center justify-between text-left mb-3 lg:mb-0">
+            <div className='rounded-full w-[110px] h-[120px] bg-black mb-4'>
+                <img className=" rounded-full h-auto w-full lg:mr-0 " src={Operations} alt="Image description"/>
             </div>
-            <h1 className='text-[24px] text-white '>
-              Lorem ipsum dolor sit, 
+            <h1 className='text-[18px]  text-white '>
+              JAYANTILAL AMLIYA
             </h1>
-            <p className='text-xs font-poppins text-[#] text-left'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eius saepe incidunt distinctio odio at ratione rerum veritatis ipsa natus accusamus aut veniam
+            <p className='text-md font-poppins text-[#dea2eb] text-center font-bold'>
+              Operation Manager 
             </p>
+            <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
+              <IoLogoWhatsapp className="text-lg" color="#00f6ff"/> +2349160938791
+            </h1>
+            <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
+              <BsFillTelephoneInboundFill className="text-lg" color="#00f6ff"/> +2349127794404
+            </h1>
 
         </div>
       </div>
