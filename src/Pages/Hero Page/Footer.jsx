@@ -11,8 +11,8 @@ const Footer = () => {
                         <img className="w-full max-w-full h-auto sm:w-6/2 md:w-full" src={logo} alt="Image description"/>  
                     </div>
                     
-                    <span className='font-poppins ml-4 mr-2 font-bold cursor-pointer text-lg flex  text-yellow-500'>Solutions Road</span>
-                    <span className='font-poppins font-bold cursor-pointer flex text-yellow-500 text-lg'>Equipments & Sparks Ltd</span>
+                    <span className='font-poppins ml-4 mr-2 font-bold cursor-pointer text-sm lg:text-lg flex  text-yellow-500'>Solutions Road</span>
+                    <span className='font-poppins font-bold cursor-pointer flex text-yellow-500 text-sm lg:text-lg'>Equipments & Sparks Ltd</span>
                 </div>
             </div>
             <div className='w-6/2 h-fit'></div>
