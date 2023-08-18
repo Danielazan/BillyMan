@@ -74,7 +74,7 @@ const Testimony = () => {
               Managing Director
             </p>
             <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
-              <IoLogoWhatsapp className="text-lg" color="#00f6ff"/> +2347084618070
+              <IoLogoWhatsapp className="text-lg" color="#3dbf4f"/> +2347084618070
             </h1>
             <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
               <BsFillTelephoneInboundFill className="text-lg" color="#00f6ff"/> +2349127794404
@@ -95,7 +95,7 @@ const Testimony = () => {
             </p>
 
             <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
-              <IoLogoWhatsapp className="text-lg" color="#00f6ff"/> +234802934452
+              <IoLogoWhatsapp className="text-lg" color="#3dbf4f"/> +234802934452
             </h1>
             <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
               <BsFillTelephoneInboundFill className="text-lg" color="#00f6ff"/> +2349036645619
@@ -115,7 +115,7 @@ const Testimony = () => {
               Operation Manager 
             </p>
             <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
-              <IoLogoWhatsapp className="text-lg" color="#00f6ff"/> +2349160938791
+              <IoLogoWhatsapp className="text-lg" color="#3dbf4f"/> +2349160938791
             </h1>
             <h1 className='text-[14px] flex justify-between gap-2 items-center  text-white '>
               <BsFillTelephoneInboundFill className="text-lg" color="#00f6ff"/> +2349127794404
