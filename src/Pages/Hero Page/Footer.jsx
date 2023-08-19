@@ -29,12 +29,23 @@ const Footer = () => {
                             </div>
                             <h1 className='text-center'>Stay Secure</h1>
 
-                            <div className='list-none text-white font-poppins text-sm flex flex-col text-left items-start justify-start ml-4'>
+                            <div className='flex items-center justify-between ml-4'>
+                                <div className='flex flex-col list-none text-white font-poppins text-sm '>
+                                    <li className='text-white text-left'>Home</li>
+                                    <li>Contact</li>
+                                    <li>Email</li>
+                                </div>
 
-                                <li className='text-white text-left'>Home</li>
-                                <li>Contact</li>
-                                <li>Email</li>
+                                <div className='list-none text-white font-poppins text-sm flex flex-col text-left items-start justify-start ml-4'>
+
+                                    <li className='text-white text-left'>Home</li>
+                                    <li>Contact</li>
+                                    <li>Email</li>
+                                </div>
+                                
                             </div>
+
+                            
                             <p>
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet consequatur unde recusandae, architecto corrupti iusto!
                             </p>
