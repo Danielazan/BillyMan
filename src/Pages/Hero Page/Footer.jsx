@@ -27,7 +27,7 @@ const Footer = () => {
                             <div className="spinner ml-6 mt-3  ">
                                 <div className="spinnerin"></div>
                             </div>
-                            <h1 className='text-center'>Stay Secure</h1>
+                            <h1 className='text-center'>Follow Us</h1>
 
                             <div className='flex items-center justify-between ml-4'>
                                 <div className='flex flex-col list-none text-white font-poppins text-sm '>
@@ -46,7 +46,7 @@ const Footer = () => {
                             </div>
 
                             
-                            <p>
+                            <p className="text-white">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet consequatur unde recusandae, architecto corrupti iusto!
                             </p>
 

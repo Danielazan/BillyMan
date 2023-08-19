@@ -23,7 +23,8 @@ const About = () => {
               </button>
             </div>
           </div>
-            {/* the div section that contains the our stroy */}
+          </div>
+          {/* the div section that contains the our stroy */}
           <div className='w-ful h-fit flex flex-col lg:flex-row '>
               <div className='w-1/2 flex flex-col items-start justify-between'>
                   <h2>Our Story</h2>
@@ -32,7 +33,6 @@ const About = () => {
                   </p>
               </div>
               <div></div>
-          </div>
       </div>
         
         
