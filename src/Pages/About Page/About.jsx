@@ -25,12 +25,23 @@ const About = () => {
           </div>
           </div>
           {/* the div section that contains the our stroy */}
-          <div className='w-ful h-fit flex flex-col lg:flex-row '>
+          <div className='w-ful h-fit flex flex-col lg:flex-row  bg-black'>
               <div className='w-1/2 flex flex-col items-start justify-between'>
                   <h2>Our Story</h2>
                   <p className='text-sm text-white font-poppins '>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit illo animi voluptate mollitia numquam non reprehenderit similique inventore rerum sint, nemo commodi reiciendis magni aut illum odio ipsam quasi neque? Minus, velit delectus saepe inventore sapiente corrupti non? At, atque!
                   </p>
+
+                  <div className='w-full h-fit flex items-center justify-center'>
+                    <div class="spinner">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div>
               </div>
               <div></div>
       </div>
