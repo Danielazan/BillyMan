@@ -12,10 +12,10 @@ import { IoLogoWhatsapp } from "react-icons/io";
 
 const Testimony = () => {
   return (
-    <div className='h-fit w-screen  '>
+    <div className='h-fit w-full  '>
       {/* what people say about us */}
       
-      <div className='flex flex-col lg:flex-row w-screen mt-8 items-center justify-center mb-4'>
+      <div className='flex flex-col lg:flex-row w- mt-8 items-center justify-center mb-4'>
  
       <div className='w-full lg:w-1/2 flex flex-col lg:block items-center justify-center lg:items-start lg:justify-start'>
             <div className="myCard lg:ml-28 lg:mb-4 items-center justify-center">

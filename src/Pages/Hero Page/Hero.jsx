@@ -18,11 +18,11 @@ const Hero = () => {
 
 
   return (
-    <div  className='flex flex-col w-screen  justify-between items-center' >
+    <div  className='flex flex-col w-full  justify-between items-center' >
       <div className=' hidden md:block bg-cover bg-no-repeat w-full max-w-full h-screen  md:w-full' style={{ backgroundImage: `url(${HeroImg2})`, backgroundPosition:`center`}} >
       
       <Navbars/>
-        <div className='justify-center w-screen flex items-center flex-col h-[60%]'>
+        <div className='justify-center w-full flex items-center flex-col h-[60%]'>
             <h1 className="text-9xl font-bold text-white">
                 <span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">Dream</span>
                  Home

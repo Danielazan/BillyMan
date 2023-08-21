@@ -13,7 +13,7 @@ import Testimony from './Testimony';
 
 const Sats = () => {
   return (
-    <div className='w-screen h-fit bg-custombg'>
+    <div className='w-full h-fit bg-custombg'>
       <div className='flex w-full h-fit  justify-evenly items-center'>
         <div className='flex flex-col  mb-1 mt-2 items-center text-center justify-center align-items-center'>
             <span className='font-bold text-lg lg:2xl font-poppins text-white '>8542+</span>
@@ -32,11 +32,14 @@ const Sats = () => {
       {/* the two div section starts here */}
       <div className='w-full flex flex-col lg:flex-row lg:mt-8'>
 
-        <div className='w-screen lg:w-1/2 flex flex-col  lg:items-start justify-center font-poppins text-white lg:mr-19 lg:ml-8 lg:pr-8 '>
-          <h2 className='text-white flex flex-col align-left font-poppins text=lg ml-4 lg:mr-8 mt-4 lg:mr-0 text-left'>
-          You do the business, <span>we’ll handle the money.</span>
-          </h2>
-          <div className=' text-[#b3b4b7] text-sm font-poppins ml-4 lg:ml-0'>
+        <div className='w-full lg:w-1/2 flex flex-col  lg:items-start justify-center font-poppins text-white '>
+            <div className='w-full pr-8 pl-8'>
+              <h2 className='text-white flex flex-col align-left font-poppins text=lg ml-4 lg:mr-8 mt-4 lg:mr-0 text-left'>
+              You do the business, <span>we’ll handle the money.</span>
+            </h2>
+            </div>
+          
+          <div className=' text-[#b3b4b7] text-sm font-poppins pl-4 lg:pl-8 lg:pr-8'>
             <p className='lg:mr-9 flex flex-col'>
               With the right credit card, you can improve your financial life by building credit, 
                 <span>
@@ -48,7 +51,7 @@ const Sats = () => {
           </button>
         </div>
 
-        <div className='w-screen lg:w-1/2 flex flex-col items-center justify-between mt-4 lg:mt-0  lg:ml-6 lg:pr-14'>
+        <div className='w-full lg:w-1/2 flex flex-col items-center justify-between mt-4 lg:mt-0  lg:ml-6 lg:pr-14'>
 
             {/* the list card */}
             <div className='flex items-center justify-center gap-2 m-2'>
@@ -122,7 +125,7 @@ const Sats = () => {
         {/* third two div section */}
 
       <div className='flex flex-col lg:flex-row w-full h-fit lg:mr-0 mt-8 lg:mt-6  '>
-        <div className='w-screen lg:w-1/2 flex flex-col items-start justify-center lg:mr-16 lg:mt-6'>
+        <div className='w-full lg:w-1/2 flex flex-col items-start justify-center lg:mr-16 lg:mt-6'>
 
           <div class="loader items-center justify-center ml-28">
             <div class="loader-square"></div>
@@ -141,7 +144,7 @@ const Sats = () => {
           </p>
         </div>
 
-        <div className='w-full lg:w-1/2 lg:ml-25 lg:flex lg:items-center lg:justify-center '>
+        <div className='w-full lg:w-1/2 lg:ml lg:flex lg:items-center lg:justify-center '>
            <img className=" h-auto w-full lg:mr-0 lg:w-1/2" src={Card} alt="Image description"/>
         </div>
       </div>

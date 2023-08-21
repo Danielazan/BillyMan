@@ -1,4 +1,4 @@
-.card {
+.footcard {
   
   background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
   border-radius: 20px;
@@ -14,6 +14,6 @@
 
 
 
-.card:hover {
+.footcard:hover {
   box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Hero from './Pages/Hero Page/Hero'
-import { MainHero } from './Pages/Hero Page/MainHero';
 import SignUp from 'Pages/SignUp Page/SignUp';
 import About from 'Pages/About Page/About';
 
