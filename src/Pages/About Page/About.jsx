@@ -140,7 +140,7 @@ const About = () => {
 
           {/* Leading Strong teams */}
 
-          <div className='w-full  items-center justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pl-4 pr-4'>
+          <div className='w-full  gap-2 items-center justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pl-4 pr-4'>
             <div className="card">Card 1</div>
             <div class="card">Card 2</div>
             <div class="card">Card 3</div>

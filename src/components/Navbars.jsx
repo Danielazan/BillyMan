@@ -28,7 +28,7 @@ const Navbars = () => {
         <img className="w-full max-w-full h-auto sm:w-6/2 md:w-full" src={logo} alt="Image description"/>  
         </div>
             <span className='font-poppins font-bold cursor-pointer text-sm text-yellow-500'>Solutions Road</span>
-            <span className='font-poppins font-bold cursor-pointer text-yellow-500 text-[10px]'>Equipments & Sparks Ltd</span>
+            <span className='font-poppins font-bold cursor-pointer text-yellow-500 text-[10px]'>Equipments & Spars Ltd</span>
         </div>
        
         <div className='flex gap-6 '>
@@ -46,7 +46,7 @@ const Navbars = () => {
           <img className="w-full max-w-full h-auto sm:w-6/2 md:w-full" src={logo} alt="Image description"/>  
           </div>
           <span className='font-poppins font-bold cursor-pointer text-sm text-yellow-500'>Solutions Road</span>
-            <span className='font-poppins font-bold cursor-pointer text-yellow-500 text-[10px]'>Equipments & Sparks Ltd</span>
+            <span className='font-poppins font-bold cursor-pointer text-yellow-500 text-[10px]'>Equipments & Spars Ltd</span>
         </div>
        
         <div className={`flex flex-col  md:hidden  relative  px-4`}>
