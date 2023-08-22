@@ -34,59 +34,63 @@ const Sats = () => {
 
         <div className='w-full lg:w-1/2 flex flex-col  lg:items-start justify-center font-poppins text-white '>
             <div className='w-full pr-8 pl-8'>
-              <h2 className='text-white flex flex-col align-left font-poppins text=lg ml-4 lg:mr-8 mt-4 lg:mr-0 text-left'>
-              You do the business, <span>we’ll handle the money.</span>
+              <h2 className='text-white flex flex-col align-left font-poppins text-xl pl-2 lg:mr-8 mt-4 lg:mr-0 text-left'>
+              Manufacturer & Exporter of Road Construction <span>Machineries, Equipments, Servicing & Trading.</span>
             </h2>
             </div>
           
           <div className=' text-[#b3b4b7] text-sm font-poppins pl-4 lg:pl-8 lg:pr-8'>
             <p className='lg:mr-9 flex flex-col'>
-              With the right credit card, you can improve your financial life by building credit, 
+              Our Equipments Have been exported to many countries, 
                 <span>
-                earning rewards and saving money. But with hundreds of credit cards on the market.
+                in the world and the performance is already proven by our Customers.
                 </span> 
             </p> 
           </div>
-          <button className="button w-[120px] h-[45px] mt-4 ml-6 lg:ml-0 items-center justify-center"> Button
-          </button>
+            <div className="w-full pr-8 pl-8">
+                <button className="button w-[120px] h-[45px] mt-4 ml-6 lg:ml-0 items-center justify-center"> Button
+              </button>
+            </div>
         </div>
 
         <div className='w-full lg:w-1/2 flex flex-col items-center justify-between mt-4 lg:mt-0  lg:ml-6 lg:pr-14'>
 
             {/* the list card */}
-            <div className='flex items-center justify-center gap-2 m-2'>
-            <BsStarFill color="#00f6ff" className='text-4xl ml-4 ' />
-            <section>
+            <div className='flex items-center justify-between gap-4 m-2'>
+            <BsStarFill color="#00f6ff" className='text-6xl ml-4 ' />
+            <section className="">
               <span className='text-white text-white text-xl font-poppins'>
                 Rewards
               </span>
-              <p className='text-[#b3b4b7] text-sm font-poppins'>
-              The best credit cards offer some tantalizing combinations of promotions and prizes
+              <p className='text-[#b3b4b7] text-xl font-poppins'>
+              We are able to provide the best-fit custom plant for any
+                condition that is wanted by our Customers.
               </p>
             </section>
             </div>
 
-            <div className='flex items-center justify-center gap-2 backdrop-blur-lg bg-[#737373] bg-opacity-20 m-2 rounded-[18px] '>
+            <div className='flex items-center justify-between gap-4 backdrop-blur-lg bg-[#737373] bg-opacity-20 m-2 rounded-[18px] '>
             <BsFillCursorFill color="#00f6ff" className='text-4xl ml-4 ' />
             <section>
               <span className='text-white text-white text-xl font-poppins'>
-                100% Secured
+                100% Fidelity
               </span>
-              <p className='text-[#b3b4b7] text-sm font-poppins'> 
-                    We take proactive steps make sure your information and transactions are secure.
-                    Balance Transfer
+              <p className='text-[#b3b4b7] text-xl font-poppins'> 
+              We are committed to superior quality
+                  and prominent results.
+
               </p>
             </section>
             </div>
 
-            <div className='flex items-center justify-center gap-2 m-2'>
-            <MdOutlineGppGood color="#00f6ff" className='text-4xl ml-4 ' />
+            <div className='flex items-center justify-between gap-4 m-2'>
+            <MdOutlineGppGood color="#00f6ff" className='text-8xl ml-4 ' />
             <section>
               <span className='text-white text-white text-xl font-poppins'>
-                 Balance Transfer
+                  Customer’s Satisfaction
               </span>
-              <p className='text-[#b3b4b7] text-sm font-poppins'>
-                  A balance transfer credit card can save you a lot of money in interest charges.
+              <p className='text-[#b3b4b7] text-xl font-poppins'>
+                  We use modernized equipments & machineries which provides work efficiency and attributes.
               </p>
             </section>
             </div>
@@ -110,7 +114,7 @@ const Sats = () => {
             </div>  
           </div>
           <h2 className='text-white flex flex-col items-start font-poppins text=lg ml-4 lg:mr-8 mt-4  text-left'>
-          Easily control your <span>billing & invoicing.</span>
+          Easily get all your products <span>delivered to your destination at low cost.</span>
           </h2>
           <p className='text-[#b3b4b7] text-sm font-poppins flex flex-col ml-4 lg:ml-0 mr-10 lg:mr-0'>
           Elit enim sed massa etiam. Mauris eu adipiscing ultrices ametodio aenean neque. <span>Fusce ipsum orci rhoncus aliporttitor integer platea placerat.
