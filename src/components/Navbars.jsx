@@ -35,7 +35,7 @@ const Navbars = () => {
           <NavLink to='/' className={`font-poppins font-bold cursor-pointer text-[18px] text-NavTextColor no-underline`}>Home</NavLink>
           <NavLink to='/About' className={`font-poppins font-bold cursor-pointer text-[18px] text-NavTextColor no-underline`}>About</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[18px] text-NavTextColor no-underline`}>Services</NavLink>
-          <NavLink to='/signup' className={`font-poppins font-bold cursor-pointer text-[18px] text-NavTextColor no-underline`}>Admin</NavLink>
+          <NavLink to='/Admin' className={`font-poppins font-bold cursor-pointer text-[18px] text-NavTextColor no-underline`}>Admin</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[18px] text-NavTextColor no-underline`}>Contact</NavLink>
         </div>
       </nav>
@@ -57,7 +57,7 @@ const Navbars = () => {
           <NavLink to='/' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>Home</NavLink>
           <NavLink to='/About' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>About</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>Services</NavLink>
-          <NavLink to='/signup' className={`font-poppins font-bold cursor-pointer text-[18px] text-white no-underline`}>Admin</NavLink>
+          <NavLink to='/Admin' className={`font-poppins font-bold cursor-pointer text-[18px] text-white no-underline`}>Admin</NavLink>
           <NavLink to='' className={`font-poppins font-bold cursor-pointer text-[16px] text-white no-underline`}>Contact</NavLink>
         </div>
         </div>

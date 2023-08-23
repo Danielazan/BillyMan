@@ -4,8 +4,6 @@ import HeroImg2 from "asstes/mobileMachine.jpg"
 import { AiFillGitlab } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
 import Footer from './Footer'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {Badge }from 'react-bootstrap';
 
 import "./styles/Hero.css"
 import Sats from './Sats';
