@@ -21,7 +21,7 @@ const Navbars = () => {
     console.log('React icon clicked!');
   };
   return (
-    <div className='w-screen  lg:px-4 relative'>
+    <div className='w-screen  lg:px-4 relative z-50'>
       <nav className='hidden lg:flex w-full flex py-6 sticky top-0 justify-between items-center px-4 '>
         <div className="flex flex-col justify-center items-center">
         <div className="rounded-full border border-solid border-black bg-white bod" style={{width:"80px", height:"80px",}}>
@@ -41,7 +41,7 @@ const Navbars = () => {
         </div>
       </nav>
           {/* mobile navbar */}
-      <nav className=' w-screen flex   mt-2 justify-between  lg:hidden' >
+      <nav className=' w-screen flex   mt-2 justify-between  lg:hidden z-50' >
         <div className="flex flex-col justify-center  items-center">
           <div className="rounded-full border border-solid border-black bg-white bod" style={{width:"80px", height:"80px",}}>
           <img className="w-full max-w-full h-auto sm:w-6/2 md:w-full" src={logo} alt="Image description"/>  

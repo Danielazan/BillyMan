@@ -35,7 +35,7 @@ const Footer = () => {
                     </div>
                   </div>
 
-                    <div className='w-fil lg:w-1/2'>
+                    <div className='w-fil lg:w-1/2 p-2'>
                       <div className="w-full flex flex-col">
                           <h1 className='text-center'>Follow Us</h1>
                           <p>

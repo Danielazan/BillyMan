@@ -85,16 +85,50 @@ const EquiImages = () => {
                 </button>
               </div>
 
-            {/* <div class="flex flex-col">
+            
+
+            </div>
+        </div>
+    </div>
+      
+        {/* section for tablur description */}
+      <div className="w-full h-fit p-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {visibleCards.map((imgs)=>(
+                <div className="h-[50vh] relative bg-red-400 flex  items-center justify-center" >
+                    <div className="w-full h-full"style={{ backgroundImage: `url(${imgs.images[0]})`,backgroundPosition:`center`, backgroundSize: `cover`}}></div>
+                     <div className='absolute w-[15rem] h-[7rem]  bottom-3 left-18 flex flex-col items-center justify-center'>
+                        <h1 className="text-2xl text-poppins font-bold text-[#fdc901]">Machine Name</h1>
+                        <h1 className="text-poppins text-2xl text-[#f6f7f9]">Machine Price</h1>
+
+                     </div>
+                </div>
+              ))}
+          </div>
+
+                {/* button to view all equipments */}
+          <div className='w-full h-fit flex items-center justify-center mt-2'>
+              {!showAllCards && (
+                <button data-label="Register" class="rainbow-hover" onClick={()=>handleButtonClick()}>
+                <span class="sp">See All Equipments</span>
+              </button>
+          )}
+          </div>
+      </div>
+
+      {/* Machine descrition */}
+
+      <div className="w-full h-fit bg-white p-4">
+            <div class="flex flex-col">
                   <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
                       <div class="overflow-hidden">
                           <table class="min-w-full text-center text-sm font-light">
                             <thead class="border-b font-medium dark:border-neutral-500">
                               <tr>
-                                <th scope="col" class="px-6 py-4">Class</th>
-                                <th scope="col" class="px-6 py-4">Heading</th>
-                                <th scope="col" class="px-6 py-4">Heading</th>
+                                <th scope="col" class="px-6 py-4">Name</th>
+                                <th scope="col" class="px-6 py-4">Price</th>
+                                <th scope="col" class="px-6 py-4">Types and Sizes</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -136,41 +170,7 @@ const EquiImages = () => {
                       </div>
                     </div>
                   </div>
-                </div> */}
-
-            </div>
-        </div>
-    </div>
-      
-        {/* section for tablur description */}
-      <div className="w-full h-fit p-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {visibleCards.map((imgs)=>(
-                <div className="h-[50vh] relative bg-red-400 flex  items-center justify-center" >
-                    <div className="w-full h-full"style={{ backgroundImage: `url(${imgs.images[0]})`,backgroundPosition:`center`, backgroundSize: `cover`}}></div>
-                     <div className='absolute w-[15rem] h-[7rem]  bottom-3 left-18 flex flex-col items-center justify-center'>
-                        <h1 className="text-2xl text-poppins font-bold text-[#fdc901]">Machine Name</h1>
-                        <h1 className="text-poppins text-2xl text-[#f6f7f9]">Machine Price</h1>
-
-                     </div>
                 </div>
-              ))}
-          </div>
-
-                {/* button to view all equipments */}
-          <div className='w-full h-fit flex items-center justify-center mt-2'>
-              {!showAllCards && (
-                <button data-label="Register" class="rainbow-hover" onClick={()=>handleButtonClick()}>
-                <span class="sp">See All Equipments</span>
-              </button>
-          )}
-          </div>
-      </div>
-
-      {/* Machine descrition */}
-
-      <div className="w-full h-fit bg-white">
-
       </div>
 
       {/* Footer */}
