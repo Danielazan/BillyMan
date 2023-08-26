@@ -6,6 +6,8 @@ import About from 'Pages/About Page/About';
 import Sidebar from 'components/sidebar';
 import Admin from 'Pages/Admin Page/Admin';
 import Equi from 'Pages/Equiment Page/Equi';
+import EquiDes from 'Pages/Equiment Page/EquiDes';
+
 
 const App = () => {
   return (
@@ -17,6 +19,7 @@ const App = () => {
         <Route path='/About' element={<About/>}/>
         <Route path='/Admin' element={<Admin/>}/>
         <Route path='/Equi' element={<Equi/>}/>
+        <Route path='/Des' element={<EquiDes/>}/>
       </Routes>
     </Router>
     </div>
