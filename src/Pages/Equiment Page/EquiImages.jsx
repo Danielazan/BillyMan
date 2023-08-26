@@ -41,20 +41,22 @@ const EquiImages = () => {
     const visibleCards = showAllCards ? imagesList : imagesList.slice(0, 3);
 
   const handleButtonClick = () => {
-    console.log(visibleCards.length)
+    
     setShowAllCards(true);
   };
 
-    
+  const Desfun = () => {
+    setShowAllCards(true);
+  };
   return (
   <div className="w-full ">
       <Navbar/>
-    <div className='w-full h-fit flex flex-col md:flex-row items-center p-4 '>
+    <div className='w-full h-fit flex flex-col md:flex-row items-center px-2'>
         <div className=' w-full md:w-2/4 h-[]'>
             <Carousel>
                 {visibleCards.map((image)=>(
                    
-                    <Carousel.Item interval={1000} as={"div"} >
+                    <Carousel.Item interval={2000} as={"div"} >
                 <img className=" h-[420px] w-full " src={image.images[0]} alt="Image description"/>
                     <Carousel.Caption>
                       <h3 className='text-black'>First slide label</h3>
@@ -91,7 +93,7 @@ const EquiImages = () => {
         </div>
     </div>
       
-        {/* section for tablur description */}
+        {/* section for machine image display */}
       <div className="w-full h-fit p-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {visibleCards.map((imgs)=>(
@@ -99,7 +101,13 @@ const EquiImages = () => {
                     <div className="w-full h-full"style={{ backgroundImage: `url(${imgs.images[0]})`,backgroundPosition:`center`, backgroundSize: `cover`}}></div>
                      <div className='absolute w-[15rem] h-[7rem]  bottom-3 left-18 flex flex-col items-center justify-center'>
                         <h1 className="text-2xl text-poppins font-bold text-[#fdc901]">Machine Name</h1>
-                        <h1 className="text-poppins text-2xl text-[#f6f7f9]">Machine Price</h1>
+                        <h1 className="text-poppins text-xl text-[#f6f7f9]">Machine Price</h1>
+
+                        <a href="#des">
+                          <button class="desbtn" onclick={Desfun()}>
+                              <span class="desbtn-content">Description</span>
+                          </button>
+                        </a>
 
                      </div>
                 </div>
@@ -118,7 +126,7 @@ const EquiImages = () => {
 
       {/* Machine descrition */}
 
-      <div className="w-full h-fit bg-white p-4">
+      <div className="w-full h-fit bg-white p-4" id="des">
             <div class="flex flex-col">
                   <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">

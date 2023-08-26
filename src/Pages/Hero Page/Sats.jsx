@@ -13,9 +13,9 @@ import Testimony from './Testimony';
 
 const Sats = () => {
   return (
-    <div className='w-full h-fit bg-custombg'>
-      <div className='flex w-full h-fit  justify-evenly items-center'>
-        <div className='flex flex-col  mb-1 mt-2 items-center text-center justify-center align-items-center'>
+    <div className='w-full h-fit bg-custombg p-2 md:p-0'>
+      <div className='flex w-full h-fit  justify-evenly items-center '>
+        <div className='flex flex-col  mb-1 mt-2 items-center text-center justify-center align-items-center '>
             <span className='font-bold text-lg lg:2xl font-poppins text-white '>8542+</span>
             <span className='font-bold text-lg lg:2xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text '>Active Members</span>
         </div>
