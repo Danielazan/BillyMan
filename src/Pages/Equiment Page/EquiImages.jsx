@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import "./styles/voltagebtn.css"
 import { useNavigate } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
@@ -8,6 +8,8 @@ import Equi2 from 'asstes/Equipments/equi2.jpg'
 import Equi3 from 'asstes/Equipments/equi3.jpg'
 import Equi4 from 'asstes/Equipments/equi4.jpg'
 import Footer from 'Pages/Hero Page/Footer';
+import axios from "axios"
+import MachinaryContext from "Hooks/useMachinaryContext"
 
 
 const imagesList = [
@@ -40,6 +42,24 @@ const EquiImages = () => {
     const [showAllCards, setShowAllCards] = useState(false);
 
     const navigate = useNavigate();
+
+    const [Test, setTest] = useState([])
+
+    const {mechines, dispatchMachine} = MachinaryContext()
+
+   
+    useEffect(() => { 
+      
+       axios.get("http://localhost:7000/api/machine").then((res)=>{
+        const json = res.data
+
+        setTest(json)
+         dispatchMachine({type:"Display Machines",payload:json})
+      })
+      
+      
+    }, [dispatchMachine])
+    // console.log(mechines)
 
     const visibleCards = showAllCards ? imagesList : imagesList.slice(0, 3);
 
@@ -128,7 +148,19 @@ const EquiImages = () => {
       </div>
 
      
-      
+      {/* test the mechain array images */}
+          <div className="w-full h-fit md:h-[20rem] flex flex-col md:flex-row item-center justify-between bg-blue-500">
+            {
+              mechines && mechines.map(mec =>{
+                return(
+                  <img crossorigin="anonymous"  src={`http://localhost:7000/images/`+mec.ImagePath }alt="mechain" className="w-full h-[20rem]" />
+                )
+              })
+            }
+
+
+            
+          </div>
       {/* Footer */}
 
       <Footer/>
