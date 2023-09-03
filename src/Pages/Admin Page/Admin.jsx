@@ -34,7 +34,7 @@ const Admin = () => {
             {isOpen && <BsFillFileExcelFill color="white" className="text-4xl mt-2" onClick={()=>toggleSidebar()} />}
         </div>
 
-        <div className="w-full flex flex-col md:flex-row">
+        <div className="w-full h-fit flex flex-col md:flex-row">
             <div className='w-1/6 h-fit  ml-4 hidden md:block' >
                 <motion.div
                     initial={{ opacity: 0, x: -100 }}
@@ -51,7 +51,10 @@ const Admin = () => {
                         <div className='w-full items flex flex-col justify-between  gap-10 mb-3 pl-4'>
                             <div className='flex items-center justify-start gap-2'>
                                 <SiBlockchaindotcom/>
-                                <Link to="/" className='no-underline text-white font-poppins'>Dashboard</Link>
+                                <Link onClick={()=>{
+                                    setMain(<Dashboard/>)
+                                    }} 
+                                    className='no-underline text-white font-poppins'>Dashboard</Link>
                             </div>
                             <div className='flex items-center justify-start gap-2'>
                                 <BsFillPeopleFill/>
@@ -111,11 +114,17 @@ const Admin = () => {
                         <div className='w-full items flex flex-col justify-between  gap-10 mb-3 pl-4'>
                             <div className='flex items-center justify-start gap-2'>
                                 <SiBlockchaindotcom/>
-                                <Link to="/" className='no-underline text-white font-poppins'>Dashboard</Link>
+                                <Link onClick={()=>{
+                                    setMain(<Dashboard/>)
+                                    }}
+                                    className='no-underline text-white font-poppins'>Dashboard</Link>
                             </div>
                             <div className='flex items-center justify-start gap-2'>
                                 <BsFillPeopleFill/>
-                                <Link to="/" className='no-underline text-white font-poppins'>Admins</Link>
+                                <Link onClick={()=>{
+                                    setMain(<Equi/>)
+                                    }} 
+                                    className='no-underline text-white font-poppins'>Admins</Link>
                             </div>
                             <div className='flex items-center justify-start gap-2'>
                                 <BsFillProjectorFill/>

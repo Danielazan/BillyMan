@@ -10,6 +10,7 @@ import Equi4 from 'asstes/Equipments/equi4.jpg'
 import Footer from 'Pages/Hero Page/Footer';
 import axios from "axios"
 import MachinaryContext from "Hooks/useMachinaryContext"
+import base from "base.js"
 
 
 const imagesList = [
@@ -43,17 +44,16 @@ const EquiImages = () => {
 
     const navigate = useNavigate();
 
-    const [Test, setTest] = useState([])
-
     const {mechines, dispatchMachine} = MachinaryContext()
 
    
     useEffect(() => { 
       
-       axios.get("http://localhost:7000/api/machine").then((res)=>{
+       axios.get(`${base.url}/api/machine`).then((res)=>{
         const json = res.data
 
-        setTest(json)
+        console.log(JSON.parse(json[4].Model))
+        
          dispatchMachine({type:"Display Machines",payload:json})
       })
       
@@ -61,7 +61,7 @@ const EquiImages = () => {
     }, [dispatchMachine])
     // console.log(mechines)
 
-    const visibleCards = showAllCards ? imagesList : imagesList.slice(0, 3);
+    const visibleCards = showAllCards ? mechines : mechines.slice(0, 3);
 
   const handleButtonClick = () => {
     
@@ -77,10 +77,10 @@ const EquiImages = () => {
     <div className='w-full h-fit flex flex-col md:flex-row items-center px-2'>
         <div className=' w-full md:w-2/4 h-[]'>
             <Carousel>
-                {visibleCards.map((image)=>(
+                {mechines && mechines.map((image)=>(
                    
                     <Carousel.Item interval={2000} as={"div"} >
-                <img className=" h-[420px] w-full " src={image.images[0]} alt="Image description"/>
+                <img crossorigin="anonymous"  src={`${base.url}/images/`+image.ImagePath }alt="mechain" className="w-full h-[20rem]" />
                     <Carousel.Caption>
                       <h3 className='text-black'>First slide label</h3>
                       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -119,22 +119,30 @@ const EquiImages = () => {
         {/* section for machine image display */}
       <div className="w-full h-fit p-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {visibleCards.map((imgs)=>(
-                <div className="h-[50vh] relative bg-red-400 flex  items-center justify-center" >
-                    <div className="w-full h-full"style={{ backgroundImage: `url(${imgs.images[0]})`,backgroundPosition:`center`, backgroundSize: `cover`}}></div>
-                     <div className='absolute w-[15rem] h-[7rem]  bottom-3 left-18 flex flex-col items-center justify-center'>
-                        <h1 className="text-2xl text-poppins font-bold text-[#fdc901]">Machine Name</h1>
-                        <h1 className="text-poppins text-xl text-[#f6f7f9]">Machine Price</h1>
+                  {
+                    mechines && visibleCards.map(mec =>{
+                      return(
+                        <div className="w-full relative">
+                          <img crossorigin="anonymous"  src={`${base.url}/images/`+mec.ImagePath }alt="mechain" className="w-full h-[20rem]" />
+                          <div className="absolute w-[15rem] h-[7rem]  bottom-3 left-28 flex flex-col items-center justify-center'">
 
-                        
-                          <button class="desbtn" onClick={Desfun}>
-                              <span class="desbtn-content">Description</span>
-                          </button>
-                       
+                          <h1 className="text-2xl text-poppins font-bold text-[#fdc901]">Machine Name</h1>
+                              <h1 className="text-poppins text-xl text-[#f6f7f9]">Machine Price</h1>
 
-                     </div>
-                </div>
-              ))}
+                              
+                                <button class="desbtn" onClick={Desfun}>
+                                    <span class="desbtn-content">Description</span>
+                                </button>
+                            
+
+                          </div>
+                        </div>
+                      )
+                    })
+                  }
+
+
+            
           </div>
 
                 {/* button to view all equipments */}
@@ -147,20 +155,6 @@ const EquiImages = () => {
           </div>
       </div>
 
-     
-      {/* test the mechain array images */}
-          <div className="w-full h-fit md:h-[20rem] flex flex-col md:flex-row item-center justify-between bg-blue-500">
-            {
-              mechines && mechines.map(mec =>{
-                return(
-                  <img crossorigin="anonymous"  src={`http://localhost:7000/images/`+mec.ImagePath }alt="mechain" className="w-full h-[20rem]" />
-                )
-              })
-            }
-
-
-            
-          </div>
       {/* Footer */}
 
       <Footer/>
