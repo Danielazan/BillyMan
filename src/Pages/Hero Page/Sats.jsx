@@ -103,7 +103,7 @@ const Sats = () => {
            <img className=" h-auto w-full lg:mr-0 lg:w-1/2" src={Banner} alt="Image description"/>
         </div>
 
-        <div className='w-screen lg:w-1/2 flex flex-col items-start justify-center'>
+        <div className='w-full lg:w-1/2 flex flex-col items-start justify-center'>
           <div class="pyramid-loader">
             <div class="wrapper">
               <span class="side side1"></span>
