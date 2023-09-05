@@ -39,7 +39,7 @@ const Sats = () => {
             </h2>
             </div>
           
-          <div className=' text-[#b3b4b7] text-sm font-poppins lg:pl-8 lg:pr-8'>
+          <div className=' text-[#b3b4b7] text-sm font-poppins pl-2 lg:pl-8 lg:pr-8'>
             <p className='lg:mr-9 flex flex-col'>
               Our Equipments Have been exported to many countries, 
                 <span>

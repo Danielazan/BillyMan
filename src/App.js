@@ -11,7 +11,7 @@ import EquiDes from 'Pages/Equiment Page/EquiDes';
 
 const App = () => {
   return (
-    <div>
+    <div className="w-full h-fit">
       <Router>
       <Routes>
         <Route path="/" element={<Hero />} />

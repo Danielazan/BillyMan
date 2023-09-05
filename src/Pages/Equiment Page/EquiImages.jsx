@@ -80,11 +80,11 @@ const EquiImages = () => {
                 {mechines && mechines.map((image)=>(
                    
                     <Carousel.Item interval={2000} as={"div"} >
-                <img crossorigin="anonymous"  src={`${base.url}/images/`+image.ImagePath }alt="mechain" className="w-full h-[20rem]" />
-                    <Carousel.Caption>
+                <img crossorigin="anonymous"  src={`${base.url}/images/`+image.ImagePath }alt="mechain" className="w-full h-[20rem] md:h-[22rem]" />
+                    {/* <Carousel.Caption>
                       <h3 className='text-black'>First slide label</h3>
                       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                  </Carousel.Caption>
+                  </Carousel.Caption> */}
                 </Carousel.Item>
                 
                   
@@ -92,7 +92,7 @@ const EquiImages = () => {
             </Carousel>
         </div>
 
-        <div className='w-full md:w-2/4  h-fit px-3'>
+        <div className='w-full md:w-2/4  h-fit px-3 '>
             <div className='w-full flex items-center justify-center'>
               <h1 className="text-poppins text-white text-2xl">Discover Our High-Quality Road Construction Equipment</h1>
             </div>
@@ -124,7 +124,7 @@ const EquiImages = () => {
                       return(
                         <div className="w-full relative">
                           <img crossorigin="anonymous"  src={`${base.url}/images/`+mec.ImagePath }alt="mechain" className="w-full h-[20rem]" />
-                          <div className="absolute w-[15rem] h-[7rem]  bottom-3 left-28 flex flex-col items-center justify-center'">
+                          <div className="absolute w-[15rem] h-[7rem]  bottom-3 left-[2rem] md:left-28 flex flex-col items-center justify-center bg-[#21252962]">
 
                           <h1 className="text-2xl text-poppins font-bold text-[#fdc901]">Machine Name</h1>
                               <h1 className="text-poppins text-xl text-[#f6f7f9]">Machine Price</h1>
