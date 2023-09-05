@@ -33,7 +33,7 @@ const Sats = () => {
       <div className='w-full flex flex-col lg:flex-row lg:mt-8'>
 
         <div className='w-full lg:w-1/2 flex flex-col  lg:items-start justify-center font-poppins text-white '>
-            <div className='w-full pr-8 pl-8'>
+            <div className='w-full pr-8 md:pl-8'>
               <h2 className='text-white flex flex-col align-left font-poppins text-xl pl-2 lg:mr-8 mt-4 lg:mr-0 text-left'>
               Manufacturer & Exporter of Road Construction <span>Machineries, Equipments, Servicing & Trading.</span>
             </h2>
