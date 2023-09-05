@@ -59,8 +59,8 @@ const About = () => {
                   <div className='flex w-full ml-2 justify-between'>
                       <h1>01.</h1>
                       <div className='w-full flex flex-col ml-3'>
-                        <h3>6 Years of intense research</h3>
-                        <p>
+                        <h3 className="text-[#e2a80a]">6 Years of intense research</h3>
+                        <p className="text-poppins font-bold text-white">
                           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias quibusdam voluptatibus reprehenderit sint. Id magnam inventore placeat quae asperiores sint, perferendis, accusamus ullam sapiente laborum consequatur voluptatum perspiciatis ab iusto.
                         </p>
                       </div>
