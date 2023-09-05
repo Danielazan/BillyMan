@@ -39,7 +39,7 @@ const Sats = () => {
             </h2>
             </div>
           
-          <div className=' text-[#b3b4b7] text-sm font-poppins pl-12 lg:pl-8 lg:pr-8'>
+          <div className=' text-[#b3b4b7] text-sm font-poppins lg:pl-8 lg:pr-8'>
             <p className='lg:mr-9 flex flex-col'>
               Our Equipments Have been exported to many countries, 
                 <span>
@@ -98,7 +98,7 @@ const Sats = () => {
       </div>
 
       {/* second two div section */}
-      <div className='flex flex-col lg:flex-row w-full h-fit lg:mr-0 mt-8 lg:mt-6  '>
+      <div className='p-6 md:p-0 flex flex-col lg:flex-row w-full h-fit lg:mr-0 mt-8 lg:mt-6  '>
         <div className='w-full lg:w-1/2 lg:ml-14'>
            <img className=" h-auto w-full lg:mr-0 lg:w-1/2" src={Banner} alt="Image description"/>
         </div>
