@@ -160,7 +160,7 @@ const Admin = () => {
                 </motion.div>
             </div>
             {/* Second half of the the Admin page begins here */}
-            <div  className=" w-full md:w-5/6 h-screen">
+            <div  className=" w-full md:w-5/6 ">
                 {Main}
             </div>
         </div>

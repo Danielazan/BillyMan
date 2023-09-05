@@ -57,43 +57,43 @@ const SetEqui = () => {
             transition={{ duration: 0.8 }}
             className=" rounded-xl w-full"
         >
-            <div className="w-full h-screen rounded-xl " style={{ border: '2px solid white' }}>
+            <div className="w-full h-fit flex flex-col gap-6 md:gap-0 rounded-xl" style={{ border: '2px solid white' }}>
                 
                 <div className="w-full h-fit flex items-center justify-between p-6" >
-                    <h1 className='text-2xl text-blue-500 font-poppins'>Equiment Name</h1>
+                    <h1 className='text-2xl hidden md:block text-blue-500 font-poppins'>Equiment Name</h1>
                     <input 
-                    className="border-b text-center border-blue-500 w-[40rem]" placeholder="Equipment" type="text"
+                    className="border-b  border-blue-500 w-[40rem]" placeholder="Equipment" type="text"
                     style={{backgroundColor: "transparent"}}
                     value={EquimentName}
                     onChange={(e) => setEquimentName(e.target.value)}
                       />
                 </div>
 
-                <div className="w-full h-fit flex items-center justify-between p-6" >
-                    <h1 className='text-2xl text-blue-500 font-poppins'>Description</h1>
+                <div className="w-full h-fit flex  items-center justify-between p-6" >
+                    <h1 className='text-2xl hidden md:block text-blue-500 font-poppins'>Description</h1>
                     <input 
-                    className="border-b text-center border-blue-500 w-[40rem]" placeholder="Description" type="text"
+                    className="border-b  border-blue-500 w-[40rem]" placeholder="Description" type="text"
                     style={{backgroundColor: "transparent"}}
                     value={Description}
                     onChange={(e) => setDescription(e.target.value)}
                       />
                 </div>
 
-                <div className="w-full h-fit flex items-center justify-between p-6  " >
+                <div className="w-full h-fit flex flex-col md:flex-row md:items-center justify-between p-6  " >
                     <h1 className='text-2xl text-blue-500 font-poppins'>Add Image</h1>
-                    <input className="border p-6 border-[#fdc901] rounded-xl" type="file" onChange={handlefile} />
+                    <input className=" width-border md:p-6 border-[#fdc901] rounded-xl" type="file" onChange={handlefile} />
                 </div>
                 
 
-                <div className="w-full h-fit mt-2 justify-center">
-                    <button className=" border border-blue-500 w-[28rem]" onClick={()=>{setNotModel(!NotModel)}}>
+                <div className="w-full items-center md:items-left h-fit pl-4 mt-2 justify-center">
+                    <button className=" border border-blue-500 w-[14rem] rounded-xl md:w-[28rem]" onClick={()=>{setNotModel(!NotModel)}}>
                         <AiOutlineDropbox className='w-[300px] ' color="#22a7f2"/>
                         Add models and Capacity for this Equipment
                     </button>
 
-                    <div className={`${NotModel ? "hidden":"block"} w-full mt-6 h-fit text-left `}>
+                    <div className={`${NotModel ? "hidden":"block"} flex flex-col gap-4 w-full mt-6 h-fit text-left `}>
                         <div className="w-full h-fit flex items-center justify-between">
-                        <h1 className="text-white font-poppins text-2xl">Model Name</h1>
+                        <h1 className="text-white hidden md:block font-poppins text-2xl">Model Name</h1>
 
                         <input 
                         className="border-b border-blue-500 w-[40rem]" placeholder="Model Name" type="text"
@@ -104,7 +104,7 @@ const SetEqui = () => {
                         </div>
 
                         <div className="w-full h-fit flex items-center justify-between">
-                        <h1 className="text-white font-poppins text-2xl">Model Capacity</h1>
+                        <h1 className="text-white hidden md:block font-poppins text-2xl">Model Capacity</h1>
 
                         <input 
                         className="border-b border-blue-500 w-[40rem]" placeholder="Model Capacity" type="text"
@@ -122,9 +122,19 @@ const SetEqui = () => {
                 </div>
 
                 
-                <button onClick={handleupload}>
-                    submit
-                </button>
+                <div className="w-full mt-4 mb-6 items-center justify-center flex ">
+                    <button className=' lg:ml-20' onClick={handleupload}>
+                        Submit
+                        <div id="clip">
+                            <div id="leftTop" class="corner"></div>
+                            <div id="rightBottom" class="corner"></div>
+                            <div id="rightTop" class="corner"></div>
+                            <div id="leftBottom" class="corner"></div>
+                        </div>
+                        <span id="rightArrow" class="arrow"></span>
+                        <span id="leftArrow" class="arrow"></span>
+                 </button>
+                </div>
             </div>
 
         </motion.div>

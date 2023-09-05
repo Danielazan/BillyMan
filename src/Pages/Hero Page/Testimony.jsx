@@ -9,10 +9,12 @@ import supervisor from "asstes/Teams Pictures/22.jpg"
 import Manager from "asstes/Teams Pictures/Manager.jpg"
 import { BsFillTelephoneInboundFill } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";
+import front from "asstes/Flip Front 1.jpg"
+import back from "asstes/Flip Back.jpg"
 
 const Testimony = () => {
   return (
-    <div className='h-fit w-full  '>
+    <div className='h-fit w-full'>
       {/* what people say about us */}
       
       <div className='flex flex-col lg:flex-row w- mt-8 items-center justify-center mb-4'>
@@ -20,20 +22,25 @@ const Testimony = () => {
       <div className='w-full lg:w-1/2 flex flex-col lg:block items-center justify-center lg:items-start lg:justify-start'>
             <div className="myCard lg:ml-28 lg:mb-4 items-center justify-center">
               <div class="innerCard">
-                  <div class="frontSide">
-                      <p class="title">FRONT SIDE</p>
-                      <p>Hover Me</p>
+                  <div class="frontSide p-2">
+                      <img src={front} alt="" />
                   </div>
-                  <div class="backSide">
-                      <p class="title">BACK SIDE</p>
-                      <p>Leave Me</p>
+                  <div class="backSide p-2">
+                  <img src={back} alt="" />
                   </div>
               </div>
           </div>
-            <p className='flex flex-col font-poppins text-[#5a5d65] lg:ml-6 text-left ml-4 mt-4 lg:mt-0  lg:text-left '>
-              Everything you need to accept card payments <span>and grow your business anywhere on the planet.</span>
-            </p>
-            <button className=' lg:ml-20'>
+            <div className="w-full h-fit md:h-[8rem]">
+              <p className='flex flex-col font-bold font-poppins text-[#d7d7d79d] lg:ml-6 text-left ml-4 mt-4 lg:mt-0  lg:text-left'>
+                Computer-aided  designing enables to design the most critical
+                parts in  such a way that they are capable of withstanding  the
+                severest  of  shocks  and  vibrations  during  operation. Ready
+                availability  of  all  frequently  needed  spares along with quick
+                service  response  helps   our  customers   achieve  maximum
+                productivity.
+              </p>
+            </div>
+            <button className=' lg:ml-20' >
                 Learn More
                 <div id="clip">
                     <div id="leftTop" class="corner"></div>
