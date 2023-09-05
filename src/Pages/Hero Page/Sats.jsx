@@ -13,13 +13,13 @@ import Testimony from './Testimony';
 
 const Sats = () => {
   return (
-    <div className='w-full h-fit bg-custombg p-2 md:p-0'>
+    <div className='w-screen md:w-full h-fit bg-custombg p-2 md:p-0'>
       <div className='flex w-full h-fit  justify-evenly items-center '>
         <div className='flex flex-col  mb-1 mt-2 items-center text-center justify-center align-items-center '>
             <span className='font-bold text-lg lg:2xl font-poppins text-white '>8542+</span>
             <span className='font-bold text-lg lg:2xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text '>Active Members</span>
         </div>
-        <div className='flex flex-col  mb-1 mt-2 items-center text-center justify-center align-items-center sm:w-full'>
+        <div className='flex flex-col  mb-1 mt-2 items-center gap-2 md:gap-0 text-center justify-center align-items-center sm:w-full'>
             <span className='font-bold text-lg lg:2xl  font-poppins text-white'>8542+</span>
             <span className='font-bold text-lg lg:2xl lg:4xl  bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text'>Trusted By People</span>
         </div>
@@ -39,7 +39,7 @@ const Sats = () => {
             </h2>
             </div>
           
-          <div className=' text-[#b3b4b7] text-sm font-poppins pl-4 lg:pl-8 lg:pr-8'>
+          <div className=' text-[#b3b4b7] text-sm font-poppins pl-12 lg:pl-8 lg:pr-8'>
             <p className='lg:mr-9 flex flex-col'>
               Our Equipments Have been exported to many countries, 
                 <span>

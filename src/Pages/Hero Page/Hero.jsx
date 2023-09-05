@@ -18,7 +18,7 @@ const Hero = () => {
 
 
   return (
-    <div  className='flex flex-col w-full  justify-between items-center' >
+    <div  className='w-screen flex flex-col w-full  justify-between items-center' >
       <div className=' hidden md:block bg-cover bg-no-repeat w-full max-w-full h-screen  md:w-full' style={{ backgroundImage: `url(${HeroImg2})`, backgroundPosition:`center`}} >
       
       <Navbars/>
