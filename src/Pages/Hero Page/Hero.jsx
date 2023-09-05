@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbars from '../../components/Navbars'
 import HeroImg2 from "asstes/mobileMachine.jpg"
+import mobilebg from "asstes/mobile.jpg"
 import { AiFillGitlab } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
 import Footer from './Footer'
@@ -39,7 +40,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="block md:hidden bg-cover bg-no-repeat w-full max-w-full h-screen justify-center items-center " style={{ backgroundImage: `url(${HeroImg2})`, backgroundPosition:`center`}}>
+      <div className="block md:hidden bg-cover bg-no-repeat w-full max-w-full h-screen justify-center items-center " style={{ backgroundImage: `url(${mobilebg})`, backgroundPosition:`center`}}>
         <Navbars/>
 
         <div className='w-full flex sm:justify-center sm:items-center flex-col h-[60%] flex-col justify-center items-center'>
