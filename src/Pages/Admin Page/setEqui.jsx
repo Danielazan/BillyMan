@@ -36,7 +36,7 @@ const SetEqui = () => {
        const AddModel =()=>{
         const id=mechinesData()
 
-        axios.post(`${base.local}/api/model/${id}`, Models).then((res) => {
+        axios.post(`${base.url}/api/model/${id}`, Models).then((res) => {
             const json = res.data
             
             // dispatchMachine({type:"Display Machines",payload:json})
@@ -62,7 +62,7 @@ const SetEqui = () => {
         formdata.append("Description",Description)
         formdata.append("Model",JSON.stringify(Modelcap))
 
-        axios.post(`${base.local}/api/machine`,formdata,{
+        axios.post(`${base.url}/api/machine`,formdata,{
             headers: {
               'Content-Type': 'multipart/form-data'
             }

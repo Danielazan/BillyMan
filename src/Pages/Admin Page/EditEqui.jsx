@@ -31,7 +31,7 @@ const EditEqui = () => {
 
     useEffect(() => { 
       
-        axios.get(`${base.local}/api/machine`).then((res)=>{
+        axios.get(`${base.url}/api/machine`).then((res)=>{
          const json = res.data
  
          console.log(json)
@@ -44,7 +44,7 @@ const EditEqui = () => {
 
      const showEquipment = async(id)=>{
      
-      await axios.get(`${base.local}/api/machine/${id}`).then((res)=>{
+      await axios.get(`${base.url}/api/machine/${id}`).then((res)=>{
         console.log(res.data)
 
         const datas = res.data
@@ -72,7 +72,7 @@ const EditEqui = () => {
      }
 
      const handleDelete = async (id)=>{
-      await axios.delete(`${base.local}/api/model/${id}`).then((res) => {
+      await axios.delete(`${base.url}/api/model/${id}`).then((res) => {
         const json = res.data
         
         // dispatchMachine({type:"Display Machines",payload:json})
@@ -81,7 +81,7 @@ const EditEqui = () => {
      }
 
      const handleDeleteEqui = async(id)=>{
-        await axios.delete(`${base.local}/api/machine/${id}`).then((res) => {
+        await axios.delete(`${base.url}/api/machine/${id}`).then((res) => {
         const json = res.data
         
         // dispatchMachine({type:"Display Machines",payload:json})
@@ -91,7 +91,7 @@ const EditEqui = () => {
 
      const handelEquiEdit= async(id)=>{
 
-        await axios.put(`${base.local}/api/machine/${id}`, ModelsEqui).then((res) => {
+        await axios.put(`${base.url}/api/machine/${id}`, ModelsEqui).then((res) => {
           const json = res.data
           
           // dispatchMachine({type:"Display Machines",payload:json})
@@ -100,7 +100,7 @@ const EditEqui = () => {
      }
     const handleEdit = async (id)=>{
       
-        await axios.put(`${base.local}/api/model/${id}`, Models).then((res) => {
+        await axios.put(`${base.url}/api/model/${id}`, Models).then((res) => {
           const json = res.data
           
           // dispatchMachine({type:"Display Machines",payload:json})
@@ -126,7 +126,7 @@ const EditEqui = () => {
                     mechines && mechines.map(mec =>{
                       return(
                         <div className="w-full relative">
-                          <img crossorigin="anonymous"  src={`${base.local}/images/`+mec.ImagePath }alt="mechain" className="w-full h-[20rem]" />
+                          <img crossorigin="anonymous"  src={`${base.url}/images/`+mec.ImagePath }alt="mechain" className="w-full h-[20rem]" />
                           <div className='w-full h-fit  mt-6 rounded-xl flex justify-center items-center'  >
                             <button className='editimgbtn w-full' onClick={()=>{
                                 settoggle(!toggle)
@@ -149,7 +149,7 @@ const EditEqui = () => {
                   <div className='flex w-full flex-col md:flex-row items-center gap-2 justify-between'>
                       {OneImage && <div className="w-full md:w-1/2 h-full bg-blue-500 rounded-xl">
                         
-                        <img crossorigin="anonymous"  src={`${base.local}/images/`+single }alt="mechaine" className="w-full h-[20rem] rounded-xl" />
+                        <img crossorigin="anonymous"  src={`${base.url}/images/`+single }alt="mechaine" className="w-full h-[20rem] rounded-xl" />
                       </div>}
                       <div className='w-full md:w-1/2 h-full bg-green-500 rounded-xl'>
                       <div className="w-full items-center h-fit flex justify-center">
