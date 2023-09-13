@@ -1,8 +1,12 @@
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import { motion } from 'framer-motion';
 import axios from 'axios';
 import { AiOutlineDropbox } from "react-icons/ai";
 import base from "base.js"
+import {LuSaveAll} from "react-icons/lu";
+import MachinaryContext from "Hooks/useMachinaryContext"
+import "./styles/containt.css"
+
 
 const SetEqui = () => {
     const [File, setFile] = useState()
@@ -11,17 +15,34 @@ const SetEqui = () => {
     const [ModelName, setModelName] = useState("")
     const [ModelCapcity, setModelCapcity] = useState("")
 
-    const [NotModel, setNotModel] = useState(true)
+    const [NotModel, setNotModel] = useState(false)
 
     const [EquimentName, setEquimentName] = useState("")
     const [Description, setDescription] = useState("")
 
+    const {mechines, dispatchMachine} = MachinaryContext()
+
+    const [Error, setError] = useState({})
+
     const Models ={
         ModelName,
-        ModelCapcity
+        Capacity:ModelCapcity
     }
-
+        const mechinesData = ()=>{
+            const lastid = mechines[mechines.length -1].id
+            console.log(lastid)
+            return lastid
+        }
        const AddModel =()=>{
+        const id=mechinesData()
+
+        axios.post(`${base.local}/api/model/${id}`, Models).then((res) => {
+            const json = res.data
+            
+            // dispatchMachine({type:"Display Machines",payload:json})
+            console.log(res.data);
+          });
+           
             setModelcap([...Modelcap, Models])
             setModelName("")
             setModelCapcity("")
@@ -41,28 +62,46 @@ const SetEqui = () => {
         formdata.append("Description",Description)
         formdata.append("Model",JSON.stringify(Modelcap))
 
-        axios.post(`${base.url}/api/machine`,formdata,{
+        axios.post(`${base.local}/api/machine`,formdata,{
             headers: {
               'Content-Type': 'multipart/form-data'
             }
           }).then((res =>{
             console.log(res.data)
-        }))
+        })).catch(error =>{
+            setError(error.response.data)
+            console.log(error.response.data)
+        })
+        setDescription("")
+        setEquimentName("")
     }
+    useEffect(() => { 
+      
+        axios.get(`${base.url}/api/machine`).then((res)=>{
+         const json = res.data
+ 
+         console.log(JSON.parse(json[4].Model))
+         
+          dispatchMachine({type:"Display Machines",payload:json})
+       })
+       
+       
+     }, [dispatchMachine])
+
   return (
-    <div className='w-full h-fit p-4'>
+    <div className='w-full h-screen overflow-scroll p-4 main-cont'>
         <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className=" rounded-xl w-full"
         >
-            <div className="w-full h-fit flex flex-col gap-6 md:gap-0 rounded-xl" style={{ border: '2px solid white' }}>
+            <div className="w-full h-fit flex flex-col gap-6 md:gap-0 rounded-xl" >
                 
                 <div className="w-full h-fit flex items-center justify-between p-6" >
                     <h1 className='text-2xl hidden md:block text-blue-500 font-poppins'>Equiment Name</h1>
                     <input 
-                    className="border-b  border-blue-500 w-[40rem]" placeholder="Equipment" type="text"
+                    className="border-b text-white font-bold border-blue-500 w-[40rem]" placeholder="Equipment" type="text"
                     style={{backgroundColor: "transparent"}}
                     value={EquimentName}
                     onChange={(e) => setEquimentName(e.target.value)}
@@ -72,7 +111,7 @@ const SetEqui = () => {
                 <div className="w-full h-fit flex  items-center justify-between p-6" >
                     <h1 className='text-2xl hidden md:block text-blue-500 font-poppins'>Description</h1>
                     <input 
-                    className="border-b  border-blue-500 w-[40rem]" placeholder="Description" type="text"
+                    className="border-b text-white font-bold border-blue-500 w-[40rem]" placeholder="Description" type="text"
                     style={{backgroundColor: "transparent"}}
                     value={Description}
                     onChange={(e) => setDescription(e.target.value)}
@@ -82,6 +121,17 @@ const SetEqui = () => {
                 <div className="w-full h-fit flex flex-col md:flex-row md:items-center justify-between p-6  " >
                     <h1 className='text-2xl text-blue-500 font-poppins'>Add Image</h1>
                     <input className=" width-border md:p-6 border-[#fdc901] rounded-xl" type="file" onChange={handlefile} />
+                </div>
+                <div className="w-full items-center flex justify-center flex-col gap-6">
+                    <button className="rounded-full w-[12rem] h-[4rem] flex items-center justify-evenly p-4" style={{ border: '2px solid white' }}
+                    onClick={handleupload}
+                    >
+                        <LuSaveAll className="text-2xl font-bold"
+                         color="#c95dff"/>
+                        <span className="font-bold text-white font-poppins ">Save Equipment</span>
+                    </button>
+
+                    {Error  && <h2 className="font-poppins font-extrabold text-xl text-red-500">{Error.error}</h2>}
                 </div>
                 
 

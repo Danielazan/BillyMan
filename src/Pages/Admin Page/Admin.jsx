@@ -13,6 +13,7 @@ import { BiSolidLogOut } from "react-icons/bi";
 import { BsFillGrid3X3GapFill,BsFillFileExcelFill} from "react-icons/bs";
 import Dashboard from "./Dashboard"
 import Equi from "./setEqui"
+import EditEqui from "./EditEqui"
 
 
 import logo from "asstes/Solution Road New Logo.png"
@@ -53,6 +54,7 @@ const Admin = () => {
                                 <SiBlockchaindotcom/>
                                 <Link onClick={()=>{
                                     setMain(<Dashboard/>)
+                                    
                                     }} 
                                     className='no-underline text-white font-poppins'>Dashboard</Link>
                             </div>
@@ -60,11 +62,14 @@ const Admin = () => {
                                 <BsFillPeopleFill/>
                                 <Link onClick={()=>{
                                     setMain(<Equi/>)
+                                    
                                 }} className='no-underline text-white font-poppins'>Admins</Link>
                             </div>
                             <div className='flex items-center justify-start gap-2'>
                                 <BsFillProjectorFill/>
-                                <Link to="/" className='no-underline text-white font-poppins'>Projects</Link>
+                                <Link onClick={()=>{
+                                    setMain(<EditEqui/>)
+                                }} className='no-underline text-white font-poppins'>Projects</Link>
                             </div>
                             <div className='flex items-center justify-start gap-2'>
                                 <BsBrowserSafari/>
@@ -116,6 +121,7 @@ const Admin = () => {
                                 <SiBlockchaindotcom/>
                                 <Link onClick={()=>{
                                     setMain(<Dashboard/>)
+                                    toggleSidebar()
                                     }}
                                     className='no-underline text-white font-poppins'>Dashboard</Link>
                             </div>
@@ -123,12 +129,16 @@ const Admin = () => {
                                 <BsFillPeopleFill/>
                                 <Link onClick={()=>{
                                     setMain(<Equi/>)
+                                    toggleSidebar()
                                     }} 
                                     className='no-underline text-white font-poppins'>Admins</Link>
                             </div>
                             <div className='flex items-center justify-start gap-2'>
                                 <BsFillProjectorFill/>
-                                <Link to="/" className='no-underline text-white font-poppins'>Projects</Link>
+                                <Link onClick={()=>{
+                                    setMain(<EditEqui/>)
+                                    toggleSidebar()
+                                }} className='no-underline text-white font-poppins'>Projects</Link>
                             </div>
                             <div className='flex items-center justify-start gap-2'>
                                 <BsBrowserSafari/>
