@@ -11,7 +11,7 @@ const Dashboard = () => {
     const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
     const formattedDate = today.toLocaleDateString('en-US', options);
 
-    const URL = base.local
+    const URL = base.url
 
     const [remechains, setremechains] = useState([])
     const {mechines, dispatchMachine} = MachinaryContext()
