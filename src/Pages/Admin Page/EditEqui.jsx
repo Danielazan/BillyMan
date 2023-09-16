@@ -16,6 +16,7 @@ const EditEqui = () => {
     const [EquiModels, setEquiModels] = useState([])
 
     // for Editing the equipments data
+    const URL = base.local
 
     const [Capacity, setCapacity] = useState("")
 
@@ -31,7 +32,7 @@ const EditEqui = () => {
 
     useEffect(() => { 
       
-        axios.get(`${base.url}/api/machine`).then((res)=>{
+        axios.get(`${URL}/api/machine`).then((res)=>{
          const json = res.data
  
          console.log(json)
@@ -44,7 +45,7 @@ const EditEqui = () => {
 
      const showEquipment = async(id)=>{
      
-      await axios.get(`${base.url}/api/machine/${id}`).then((res)=>{
+      await axios.get(`${URL}/api/machine/${id}`).then((res)=>{
         console.log(res.data)
 
         const datas = res.data
@@ -72,7 +73,7 @@ const EditEqui = () => {
      }
 
      const handleDelete = async (id)=>{
-      await axios.delete(`${base.url}/api/model/${id}`).then((res) => {
+      await axios.delete(`${URL}/api/model/${id}`).then((res) => {
         const json = res.data
         
         // dispatchMachine({type:"Display Machines",payload:json})
@@ -81,7 +82,7 @@ const EditEqui = () => {
      }
 
      const handleDeleteEqui = async(id)=>{
-        await axios.delete(`${base.url}/api/machine/${id}`).then((res) => {
+        await axios.delete(`${URL}/api/machine/${id}`).then((res) => {
         const json = res.data
         
         // dispatchMachine({type:"Display Machines",payload:json})
@@ -91,7 +92,7 @@ const EditEqui = () => {
 
      const handelEquiEdit= async(id)=>{
 
-        await axios.put(`${base.url}/api/machine/${id}`, ModelsEqui).then((res) => {
+        await axios.put(`${URL}/api/machine/${id}`, ModelsEqui).then((res) => {
           const json = res.data
           
           // dispatchMachine({type:"Display Machines",payload:json})
@@ -100,7 +101,7 @@ const EditEqui = () => {
      }
     const handleEdit = async (id)=>{
       
-        await axios.put(`${base.url}/api/model/${id}`, Models).then((res) => {
+        await axios.put(`${URL}/api/model/${id}`, Models).then((res) => {
           const json = res.data
           
           // dispatchMachine({type:"Display Machines",payload:json})
@@ -126,7 +127,7 @@ const EditEqui = () => {
                     mechines && mechines.map(mec =>{
                       return(
                         <div className="w-full relative">
-                          <img crossorigin="anonymous"  src={`${base.url}/images/`+mec.ImagePath }alt="mechain" className="w-full h-[20rem]" />
+                          <img crossorigin="anonymous"  src={`${URL}/images/`+mec.ImagePath }alt="mechain" className="w-full h-[20rem]" />
                           <div className='w-full h-fit  mt-6 rounded-xl flex justify-center items-center'  >
                             <button className='editimgbtn w-full' onClick={()=>{
                                 settoggle(!toggle)
@@ -149,7 +150,7 @@ const EditEqui = () => {
                   <div className='flex w-full flex-col md:flex-row items-center gap-2 justify-between'>
                       {OneImage && <div className="w-full md:w-1/2 h-full bg-blue-500 rounded-xl">
                         
-                        <img crossorigin="anonymous"  src={`${base.url}/images/`+single }alt="mechaine" className="w-full h-[20rem] rounded-xl" />
+                        <img crossorigin="anonymous"  src={`${URL}/images/`+single }alt="mechaine" className="w-full h-[20rem] rounded-xl" />
                       </div>}
                       <div className='w-full md:w-1/2 h-full bg-green-500 rounded-xl'>
                       <div className="w-full items-center h-fit flex justify-center">
@@ -214,13 +215,17 @@ const EditEqui = () => {
                         </div>
 
                         <div className="mt-4 w-full h-fit items-center flex justify-center">
-                            <button className="w-[12rem] h-[4rem] rounded-full bg-blue-500 font-poppins text-2xl font-bold ">
+                            <button 
+                              onClick={()=>{handelEquiEdit(OneImage.id)}}
+                            className="w-[12rem] h-[4rem] rounded-full bg-blue-500 font-poppins text-2xl font-bold ">
                                 Save Changes 
                             </button>
                         </div>
 
                         <div className="mt-4 w-full h-fit items-center flex justify-center">
-                            <button className="w-[12rem] h-[4rem] rounded-full bg-blue-500 font-poppins text-2xl font-bold ">
+                            <button 
+                            onClick={()=>handleDeleteEqui(OneImage.id)}
+                            className="w-[12rem] h-[4rem] rounded-full bg-blue-500 font-poppins text-2xl font-bold ">
                                 Delete Equipment 
                             </button>
                         </div>

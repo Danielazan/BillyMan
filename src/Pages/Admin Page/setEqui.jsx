@@ -11,6 +11,8 @@ import "./styles/containt.css"
 const SetEqui = () => {
     const [File, setFile] = useState()
 
+    const URL = base.local
+    
     const [Modelcap, setModelcap] = useState([])
     const [ModelName, setModelName] = useState("")
     const [ModelCapcity, setModelCapcity] = useState("")
@@ -36,7 +38,7 @@ const SetEqui = () => {
        const AddModel =()=>{
         const id=mechinesData()
 
-        axios.post(`${base.url}/api/model/${id}`, Models).then((res) => {
+        axios.post(`${URL}/api/model/${id}`, Models).then((res) => {
             const json = res.data
             
             // dispatchMachine({type:"Display Machines",payload:json})
@@ -62,7 +64,7 @@ const SetEqui = () => {
         formdata.append("Description",Description)
         formdata.append("Model",JSON.stringify(Modelcap))
 
-        axios.post(`${base.url}/api/machine`,formdata,{
+        axios.post(`${URL}/api/machine`,formdata,{
             headers: {
               'Content-Type': 'multipart/form-data'
             }
@@ -77,7 +79,7 @@ const SetEqui = () => {
     }
     useEffect(() => { 
       
-        axios.get(`${base.url}/api/machine`).then((res)=>{
+        axios.get(`${URL}/api/machine`).then((res)=>{
          const json = res.data
  
          console.log(JSON.parse(json[4].Model))

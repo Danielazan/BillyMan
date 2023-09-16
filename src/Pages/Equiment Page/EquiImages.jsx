@@ -52,7 +52,7 @@ const EquiImages = () => {
        axios.get(`${base.url}/api/machine`).then((res)=>{
         const json = res.data
 
-        console.log(JSON.parse(json[4].Model))
+        // console.log(JSON.parse(json[4].Model))
         
          dispatchMachine({type:"Display Machines",payload:json})
       })
