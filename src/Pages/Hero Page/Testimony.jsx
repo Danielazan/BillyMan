@@ -40,7 +40,7 @@ const Testimony = () => {
                 productivity.
               </p>
             </div>
-            <button className=' lg:ml-20' >
+            <button className=' lg:ml-20' mt-2 >
                 Learn More
                 <div id="clip">
                     <div id="leftTop" class="corner"></div>

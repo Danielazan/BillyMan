@@ -14,7 +14,7 @@ import Testimony from './Testimony';
 const Sats = () => {
   return (
     <div className='w-screen md:w-full h-fit bg-custombg p-2 md:p-0'>
-      <div className='flex w-full h-fit  justify-evenly items-center '>
+      <div className='flex w-full h-fit  justify-between items-center '>
         <div className='flex flex-col  mb-1 mt-2 items-center text-center justify-center align-items-center '>
             <span className='font-bold text-lg lg:2xl font-poppins text-white '>8542+</span>
             <span className='font-bold text-lg lg:2xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text '>Active Members</span>
@@ -33,33 +33,33 @@ const Sats = () => {
       <div className='w-full flex flex-col lg:flex-row lg:mt-8'>
 
         <div className='w-full lg:w-1/2 flex flex-col  lg:items-start justify-center font-poppins text-white '>
-            <div className='w-full pr-8 md:pl-8'>
-              <h2 className='text-white flex flex-col align-left font-poppins text-xl pl-2 lg:mr-8 mt-4 lg:mr-0 text-left'>
+            <div className='w-full pr-8 md:pl-8 m-4 md:m-0'>
+              <h2 className='text-white flex flex-col align-left font-poppins text-xl md:text-2xl pl-2 lg:mr-8 mt-4 lg:mr-0 text-left'>
               Manufacturer & Exporter of Road Construction <span>Machineries, Equipments, Servicing & Trading.</span>
             </h2>
             </div>
           
           <div className=' text-[#b3b4b7] text-sm font-poppins pl-2 lg:pl-8 lg:pr-8'>
-            <p className='lg:mr-9 flex flex-col'>
+            <p className='lg:mr-9 text-md flex flex-col'>
               Our Equipments Have been exported to many countries, 
                 <span>
                 in the world and the performance is already proven by our Customers.
                 </span> 
             </p> 
           </div>
-            <div className="w-full pr-8 pl-8">
+            {/* <div className="w-full pr-8 pl-8">
                 <button className="button w-[120px] h-[45px] mt-4 ml-6 lg:ml-0 items-center justify-center"> Button
               </button>
-            </div>
+            </div> */}
         </div>
 
         <div className='w-full lg:w-1/2 flex flex-col items-center justify-between mt-4 lg:mt-0  lg:ml-6 lg:pr-14'>
 
             {/* the list card */}
             <div className='flex items-center justify-between gap-4 m-2'>
-            <BsStarFill color="#00f6ff" className='text-6xl ml-4 ' />
+            <BsStarFill color="#00f6ff" className='hidden md:flex text-6xl ml-4 ' />
             <section className="">
-              <span className='text-white text-white text-xl font-poppins'>
+              <span className='text-[#7d919a] text-white text-xl font-poppins'>
                 Rewards
               </span>
               <p className='text-[#b3b4b7] text-xl font-poppins'>
@@ -69,8 +69,8 @@ const Sats = () => {
             </section>
             </div>
 
-            <div className='flex items-center justify-between gap-4 backdrop-blur-lg bg-[#737373] bg-opacity-20 m-2 rounded-[18px] '>
-            <BsFillCursorFill color="#00f6ff" className='text-4xl ml-4 ' />
+            <div className='flex items-center justify-between gap-4 backdrop-blur-lg bg-[#737373] p-4 bg-opacity-20 m-2 rounded-[18px] '>
+            <BsFillCursorFill color="#00f6ff" className='text-4xl hidden md:flex ml-4 ' />
             <section>
               <span className='text-white text-white text-xl font-poppins'>
                 100% Fidelity
@@ -84,7 +84,7 @@ const Sats = () => {
             </div>
 
             <div className='flex items-center justify-between gap-4 m-2'>
-            <MdOutlineGppGood color="#00f6ff" className='text-8xl ml-4 ' />
+            <MdOutlineGppGood color="#00f6ff" className='text-8xl hidden md:flex ml-4 ' />
             <section>
               <span className='text-white text-white text-xl font-poppins'>
                   Customer’s Satisfaction
@@ -116,9 +116,10 @@ const Sats = () => {
           <h2 className='text-white flex flex-col items-start font-poppins text=lg ml-4 lg:mr-8 mt-4  text-left'>
           Easily get all your products <span>delivered to your destination at low cost.</span>
           </h2>
-          <p className='text-[#b3b4b7] text-sm font-poppins flex flex-col ml-4 lg:ml-0 mr-10 lg:mr-0'>
-          Elit enim sed massa etiam. Mauris eu adipiscing ultrices ametodio aenean neque. <span>Fusce ipsum orci rhoncus aliporttitor integer platea placerat.
-            </span>
+          <p className='text-[#b3b4b7] text-sm font-poppins flex flex-col ml-4 lg:ml-0 mr-10 lg:mr-0 md:pr-6'>
+          Our system streamlines the process of managing orders and customers, reducing the time and effort required to complete these tasks.With our system, businesses can easily access customer information, track orders, and respond to customer inquiries, improving customer satisfaction and retention.Our system is designed to be user-friendly and customizable, allowing businesses to tailor it to their specific needs and preferences.
+
+          
           </p>
             <div className='w-1/2'>
 
@@ -141,10 +142,10 @@ const Sats = () => {
             <div class="loader-square"></div>
           </div>
           <h2 className='text-white flex flex-col items-start font-poppins text=lg ml-4 lg:ml-8 mt-4  text-left'>
-            Find a better card deal <span>in few easy steps.</span>
+            Reliability
           </h2>
-          <p className='text-[#b3b4b7] text-sm font-poppins flex flex-col ml-4 lg:ml-8 mr-10 lg:mr-0'>
-          Arcu tortor, purus in mattis at sed integer faucibus. Aliquet quis aliquet eget mauris tortor.ç Aliquet ultrices ac, ametau.
+          <p className='text-[#b3b4b7] text-md font-poppins flex flex-col ml-4 lg:ml-8 mr-10 lg:mr-0'>
+          The degree in which our equipments are designed aids a highclass functionality thereby producing highly unmatchable results.
           </p>
         </div>
 

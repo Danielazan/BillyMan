@@ -37,10 +37,10 @@ const Footer = () => {
 
                     <div className='w-fil lg:w-1/2 p-2'>
                       <div className="w-full flex flex-col">
-                          <h1 className='text-center'>Follow Us</h1>
-                          <p>
+                          <h1 className='text-center'>Contact Us</h1>
+                          {/* <p>
                               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, perferendis?
-                          </p>
+                          </p> */}
       
                     </div>
 
@@ -49,9 +49,7 @@ const Footer = () => {
                               <li className='text-white text-left'>Home</li>
                               <li>Contact</li>
                               <li>Email</li>
-                              <li className='text-white text-left'>Home</li>
-                              <li>Contact</li>
-                              <li>Email</li>
+                              
                           </div>
       
                           <div className='list-none justify-between gap-4 text-white font-poppins text-sm flex flex-col text-left items-start justify-start ml-4'>
@@ -59,9 +57,7 @@ const Footer = () => {
                               <li className='text-white text-left'>Home</li>
                               <li>Contact</li>
                               <li>Email</li>
-                              <li className='text-white text-left'>Home</li>
-                              <li>Contact</li>
-                              <li>Email</li>
+                              
                           </div>
       
                           <div className='list-none justify-between gap-4 text-white font-poppins text-sm flex flex-col text-left items-start justify-start ml-4'>
@@ -69,9 +65,7 @@ const Footer = () => {
                               <li className='text-white text-left'>Home</li>
                               <li>Contact</li>
                               <li>Email</li>
-                              <li className='text-white text-left'>Home</li>
-                              <li>Contact</li>
-                              <li>Email</li>
+                              
                           </div>
                           
                       </div>
