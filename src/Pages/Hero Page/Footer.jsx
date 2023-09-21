@@ -30,7 +30,7 @@ const Footer = () => {
                             <img className="w-full max-w-full h-auto sm:w-6/2 md:w-full" src={logo} alt="Image description"/>  
                         </div>
                         
-                        <span className='font-poppins ml-4 mr-2 font-bold cursor-pointer text-sm lg:text-lg flex  text-yellow-500'>Solutions Road Equipments & Spars Ltd</span>
+                        <span className='font-poppins ml-4 mr-2 font-bold cursor-pointer text-sm lg:text-lg flex  text-yellow-500'>Solution Road Equipments & Spars Ltd</span>
                         
                     </div>
                   </div>

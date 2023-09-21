@@ -1,10 +1,13 @@
-import {useEffect,useState} from 'react'
+import {useEffect,useState,useContext} from 'react'
 import { motion } from 'framer-motion';
 import { HiOutlineSearch } from "react-icons/hi";
 import "./styles/containt.css"
 import axios from "axios"
 import MachinaryContext from "Hooks/useMachinaryContext"
 import base from "base.js"
+import "./styles/containt.css"
+import {DashboardContext } from './Admin';
+import EditEqui from "./EditEqui"
 
 const Dashboard = () => {
     const today = new Date();
@@ -14,10 +17,11 @@ const Dashboard = () => {
     const optionsSmall = { month: 'short', day: 'numeric' };
     const formattedDateSmall = today.toLocaleDateString('en-US', optionsSmall);
 
-    const URL = base.local
+    const URL = base.url
 
     const [remechains, setremechains] = useState([])
     const {mechines, dispatchMachine} = MachinaryContext()
+    const [DashboardVariable, setDashboardVariable] = useContext(DashboardContext)
 
     const [showAllCards, setShowAllCards] = useState(false);
     
@@ -28,23 +32,32 @@ const Dashboard = () => {
             console.log(json)
             
              dispatchMachine({type:"Display Machines",payload:json})
+
+             setremechains(mechines.reverse())
+
+             console.log(remechains)
           })
           
-          const remechains = mechines.reverse()
-
-          const visibleCards = remechains.slice(0, 3);
-
-          setremechains(visibleCards)
-
-        console.log(remechains)
-      
+   
+          
     }, [dispatchMachine])
+
+
+    useEffect(() => {
+     
+    }, [])
+    
+
+    const match = mechines.reverse().slice(0,3)
     
     
+    const toEditpage= ()=>{
+
+    }
 
 
   return (
-    <div className="w-full p-4 h-fit">
+    <div className="w-full h-screen overflow-scroll p-4 main-cont ">
                 <motion.div
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -80,7 +93,7 @@ const Dashboard = () => {
                     </div>
                     
                     {/* second div */}
-                    <div className="w-full  h-[25rem] md:h-[22rem] rounded-xl mt-6" style={{ border: '2px solid white' }}>
+                    <div className="w-full  h-[30rem] md:h-[25rem] rounded-xl mt-6" style={{ border: '2px solid white' }}>
                          <div className="flex items-center justify-between w-full md:px-4 py-3">
                             <div className="flex flex-col w-1/2 ">
                                 <h2 className='text-4xl font-poppins text-white'>List Item</h2>
@@ -111,124 +124,102 @@ const Dashboard = () => {
                          {/* the table contents starts here */}
 
                          
-                                
-                            <div className="overflow-scroll w-full h-[16.6rem] shadow-md md:rounded-xl md:px-4 md:py-3  rounded-lg">
+                                {/* show in medium screen up */}
+                            <div className="hidden md:block overflow-scroll main-cont  w-full h-[16.6rem] md: h-[14rem]
+                            shadow-md md:rounded-xl md:px-4 md:py-3  rounded-lg ">
                                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                                     <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 bg-black" >
                                         <tr>
+                                            <th scope="col" className="px-6 py-3 text-white">
+                                                Product ID
+                                            </th>
                                             <th scope="col" className="px-6 py-3 text-white">
                                                 Product name
                                             </th>
                                             <th scope="col" className="px-6 py-3">
                                                 Color
                                             </th>
-                                            <th scope="col" className="px-6 py-3">
-                                                Category
-                                            </th>
-                                            <th scope="col" className="px-6 py-3">
-                                                Price
-                                            </th>
-                                            <th scope="col" className="px-6 py-3">
-                                                Action
-                                            </th>
+                                           
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {mechines && remechains.map(rem =>{
-                                            
-                                        })}
-                                        <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-                                            <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                Apple MacBook Pro 17"
-                                            </th>
-                                            <td className="px-6 py-4">
-                                                Silver
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                Laptop
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                $2999
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                            </td>
-                                        </tr>
-                                        <tr className="border-b bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-                                            <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                Microsoft Surface Pro
-                                            </th>
-                                            <td className="px-6 py-4">
-                                                White
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                Laptop PC
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                $1999
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                            </td>
-                                        </tr>
-                                        <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-                                            <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                Magic Mouse 2
-                                            </th>
-                                            <td className="px-6 py-4">
-                                                Black
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                Accessories
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                $99
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                            </td>
-                                        </tr>
-                                        <tr className="border-b bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-                                            <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                Google Pixel Phone
-                                            </th>
-                                            <td className="px-6 py-4">
-                                                Gray
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                Phone
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                $799
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                Apple Watch 5
-                                            </th>
-                                            <td className="px-6 py-4">
-                                                Red
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                Wearables
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                $999
-                                            </td>
-                                            <td className="px-6 py-4">
-                                                <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
+                                {
+                                  match.map(equi =>{
+                                    return(
+                                      <tr
+                                className="border-b border-neutral-100 bg-neutral-50 text-neutral-800 dark:bg-neutral-50">
+                                <td className="whitespace-nowrap px-6 py-4 font-medium">
+                                  {equi.id}
+                                </td>
+                                <td className="whitespace-nowrap px-6 py-4">{equi.Name}</td>
+                                <td class="whitespace-nowrap px-6 py-4">{equi.Capacity}</td>
+                              </tr>
+                                    )
+                                  })
+                                }
+                            </tbody>
                                 </table>
                             </div>
 
+                            {/* show on small screen */}
+                                 <div className="md:hidden overflow-scroll  w-full h-[20.6rem]
+                            shadow-md md:rounded-xl md:px-4 md:py-3  rounded-lg ">
+                                <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                                    <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 bg-black" >
+                                        <tr>
+                                            <th scope="col" className="px-6 py-3 text-white">
+                                                Product ID
+                                            </th>
+                                            <th scope="col" className="px-6 py-3 text-white">
+                                                Product name
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Color
+                                            </th>
+                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                {
+                                  match.map(equi =>{
+                                    return(
+                                      <tr
+                                className="border-b border-neutral-100 bg-neutral-50 text-neutral-800 dark:bg-neutral-50">
+                                <td className="whitespace-nowrap px-6 py-4 font-medium">
+                                  {equi.id}
+                                </td>
+                                <td className="whitespace-nowrap px-6 py-4">{equi.Name}</td>
+                                <td class="whitespace-nowrap px-6 py-4">{equi.Capacity}</td>
+                              </tr>
+                                    )
+                                  })
+                                }
+                            </tbody>
+                                </table>
+                            </div>
                         
                     </div>
-                    <div className="w-full h-[10rem] rounded-xl mt-4" style={{ border: '2px solid white' }}></div>
+
+                    {/* third div section */}
+                    <div className="w-full h-[10rem] overflow-scroll rounded-xl main-cont mt-4" style={{ border: '2px solid white' }}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between pl-4 pr-4 md:pr-0">
+                  {
+                    mechines && match.map(mec =>{
+                      return(
+                        <div className="w-[20rem] h-[10rem] relative" onClick={()=>setDashboardVariable(<EditEqui/>)}>
+                          <img crossorigin="anonymous"  src={`${base.url}/images/`+mec.ImagePath }alt="mechain" className="w-full md:w-[15rem] h-[10rem]" />
+                          {/* <div className="absolute w-[15rem] h-[7rem]  bottom-3 left-[2rem] md:left-28 flex flex-col items-center justify-center bg-[#21252962]">
+
+                          </div> */}
+                        </div>
+                      )
+                    })
+                  }
+
+
+            
+          </div>
+                    </div>
 
                 </motion.div>
                 </div>

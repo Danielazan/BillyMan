@@ -11,7 +11,7 @@ import "./styles/containt.css"
 const SetEqui = () => {
     const [File, setFile] = useState()
 
-    const URL = base.local
+    const URL = base.url
     
     const [Modelcap, setModelcap] = useState([])
     const [ModelName, setModelName] = useState("")
@@ -82,7 +82,7 @@ const SetEqui = () => {
         axios.get(`${URL}/api/machine`).then((res)=>{
          const json = res.data
  
-         console.log(JSON.parse(json[4].Model))
+         
          
           dispatchMachine({type:"Display Machines",payload:json})
        })

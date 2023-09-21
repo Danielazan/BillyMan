@@ -1,5 +1,5 @@
 import Sidebar from 'components/sidebar'
-import {useState} from 'react'
+import {useState, createContext,useContext,useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { motion } from 'framer-motion';
@@ -14,18 +14,40 @@ import { BsFillGrid3X3GapFill,BsFillFileExcelFill} from "react-icons/bs";
 import Dashboard from "./Dashboard"
 import Equi from "./setEqui"
 import EditEqui from "./EditEqui"
+import Team from "./Team"
 
 
 import logo from "asstes/Solution Road New Logo.png"
+
+export const DashboardContext = createContext();
+
+export const DashboardProvider = ({ children }) => {
+    const [DashboardVariable, setDashboardVariable] = useState(<Dashboard/>);
+  
+    return (
+      <DashboardContext.Provider value={[DashboardVariable, setDashboardVariable]}>
+        {children}
+      </DashboardContext.Provider>
+    );
+  };
 
 const Admin = () => {
     const [isOpen, setIsOpen] = useState(false);
     
     const [Main, setMain] = useState(<Dashboard/>)
 
+    const [DashboardVariable, setDashboardVariable] = useContext(DashboardContext)
+
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
+
+//   useEffect(() => {
+//     setDashboardVariable(<Dashboard/>)
+  
+    
+//   }, [])
+  
   return (
     <div className='w-full h-fit bg-[#081225]'>
         <Navbar/>
@@ -53,7 +75,7 @@ const Admin = () => {
                             <div className='flex items-center justify-start gap-2'>
                                 <SiBlockchaindotcom/>
                                 <Link onClick={()=>{
-                                    setMain(<Dashboard/>)
+                                    setDashboardVariable(<Dashboard/>)
                                     
                                     }} 
                                     className='no-underline text-white font-poppins'>Dashboard</Link>
@@ -61,19 +83,21 @@ const Admin = () => {
                             <div className='flex items-center justify-start gap-2'>
                                 <BsFillPeopleFill/>
                                 <Link onClick={()=>{
-                                    setMain(<Equi/>)
+                                    setDashboardVariable(<Equi/>)
                                     
-                                }} className='no-underline text-white font-poppins'>Admins</Link>
+                                }} className='no-underline text-white font-poppins'>New Equipmet</Link>
                             </div>
                             <div className='flex items-center justify-start gap-2'>
                                 <BsFillProjectorFill/>
                                 <Link onClick={()=>{
-                                    setMain(<EditEqui/>)
-                                }} className='no-underline text-white font-poppins'>Projects</Link>
+                                    setDashboardVariable(<EditEqui/>)
+                                }} className='no-underline text-white font-poppins'>Edit Equipments</Link>
                             </div>
                             <div className='flex items-center justify-start gap-2'>
                                 <BsBrowserSafari/>
-                                <Link to="/" className='no-underline text-white font-poppins'>Services</Link>
+                                <Link onClick={()=>{
+                                    setDashboardVariable(<Team/>)
+                                }} className='no-underline text-white font-poppins'>New Team Member</Link>
                             </div>
                             <div className='flex items-center justify-start gap-2'>
                                 <MdNotificationsActive/>
@@ -120,7 +144,7 @@ const Admin = () => {
                             <div className='flex items-center justify-start gap-2'>
                                 <SiBlockchaindotcom/>
                                 <Link onClick={()=>{
-                                    setMain(<Dashboard/>)
+                                    setDashboardVariable(<Dashboard/>)
                                     toggleSidebar()
                                     }}
                                     className='no-underline text-white font-poppins'>Dashboard</Link>
@@ -128,21 +152,24 @@ const Admin = () => {
                             <div className='flex items-center justify-start gap-2'>
                                 <BsFillPeopleFill/>
                                 <Link onClick={()=>{
-                                    setMain(<Equi/>)
+                                    setDashboardVariable(<Equi/>)
                                     toggleSidebar()
                                     }} 
-                                    className='no-underline text-white font-poppins'>Admins</Link>
+                                    className='no-underline text-white font-poppins'>New Equipmet</Link>
                             </div>
                             <div className='flex items-center justify-start gap-2'>
                                 <BsFillProjectorFill/>
                                 <Link onClick={()=>{
-                                    setMain(<EditEqui/>)
+                                    setDashboardVariable(<EditEqui/>)
                                     toggleSidebar()
-                                }} className='no-underline text-white font-poppins'>Projects</Link>
+                                }} className='no-underline text-white font-poppins'>Edit Equipments</Link>
                             </div>
                             <div className='flex items-center justify-start gap-2'>
                                 <BsBrowserSafari/>
-                                <Link to="/" className='no-underline text-white font-poppins'>Services</Link>
+                                <Link onClick={()=>{
+                                    setDashboardVariable(<Team/>)
+                                    toggleSidebar()
+                                }} className='no-underline text-white font-poppins'>New Team Member</Link>
                             </div>
                             <div className='flex items-center justify-start gap-2'>
                                 <MdNotificationsActive/>
@@ -171,7 +198,7 @@ const Admin = () => {
             </div>
             {/* Second half of the the Admin page begins here */}
             <div  className=" w-full md:w-5/6 ">
-                {Main}
+                {DashboardVariable}
             </div>
         </div>
     </div>
